@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { DATA } from "@/data/resume";
 
-export const alt = `${DATA.name} — Software Engineer & Creative Designer`;
+export const alt = `${DATA.name} | Software Engineer & Creative Designer`;
 export const size = {
   width: 1200,
   height: 630,

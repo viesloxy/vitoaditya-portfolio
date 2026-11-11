@@ -425,7 +425,7 @@ export default function Page() {
             © {new Date().getFullYear()} {DATA.name}. All rights reserved.
           </p>
           <p className="flex items-center gap-1">
-            Crafted with passion &amp; purpose —{" "}
+            Built with{" "}
             <Badge variant="outline" className="h-5 px-1.5 text-[10px] font-medium">
               Next.js
             </Badge>

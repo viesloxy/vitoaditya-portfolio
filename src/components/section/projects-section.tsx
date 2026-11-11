@@ -27,7 +27,7 @@ export default function ProjectsSection() {
             </h2>
             <p className="text-balance text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
               From open-source UMKM tools to AI platforms and award-winning
-              class projects — here are a few of my favorites.
+              class projects, here are a few of my favorites.
             </p>
           </div>
         </div>

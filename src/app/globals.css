@@ -98,7 +98,7 @@
     @apply bg-background text-foreground;
   }
 
-  /* Brand icons that render black by default (Next.js, Framer) — invert them on dark bg */
+  /* Brand icons that render black by default (Next.js, Framer), inverted on dark bg */
   .dark .tech-icon-invert {
     filter: invert(1);
   }

@@ -11,14 +11,14 @@ import {
 export const DATA = {
   name: "Vito Aditya",
   initials: "VA",
-  url: "https://vitoaditya-portfolio-2026.netlify.app",
+  url: "https://vitoaditya.my.id",
   location: "Surabaya, Indonesia",
   locationLink:
     "https://www.google.com/maps/place/Surabaya,+East+Java,+Indonesia",
   description:
-    "Software Engineer & Creative Designer. Informatics student at Universitas Airlangga who loves building elegant, high-performance web applications where beautiful design meets robust logic.",
+    "Software Engineer & Creative Designer. Informatics student at Universitas Airlangga who builds web applications people actually enjoy using.",
   summary:
-    "I'm **Vito Aditya** — a passionate Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Information Technology at Universitas Airlangga](https://www.unair.ac.id) with a 3.66/4.00 GPA. I specialize in building elegant, high-performance web applications that seamlessly blend aesthetics with engineering — from [Kulakan](https://kulakan.web.id), an open-source profit & inventory manager for small F&B businesses, to [SiLestari](https://silestari.vercel.app), an AI-powered platform for preserving Indonesia's regional languages. Beyond code, I'm a [national award-winning filmmaker](/#achievements), a [BNSP-certified digital marketer & graphic designer](/#achievements), and an active member of HIMTI Universitas Airlangga. *Design is not a product, but a process.*",
+    "I'm **Vito Aditya**, a Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Information Technology at Universitas Airlangga](https://www.unair.ac.id) with a 3.66/4.00 GPA. I like working where design and engineering overlap, from [Kulakan](https://kulakan.web.id), an open-source profit and inventory manager for small F&B businesses, to [SiLestari](https://silestari.vercel.app), an AI-powered platform for preserving Indonesia's regional languages. Beyond code, I'm a [national award-winning filmmaker](/#achievements), a [BNSP-certified digital marketer and graphic designer](/#achievements), and an active member of HIMTI Universitas Airlangga.",
   avatarUrl: "/me.jpg",
   resumeUrl:
     "https://drive.google.com/file/d/1Bdm-hVJQkhXLvfqbIjmAOvNPF-jF0q1D/view?usp=sharing",
@@ -86,7 +86,7 @@ export const DATA = {
       icon: "clapperboard",
       title: "Filmmaking",
       description:
-        "National award-winning short film director — 1st Place Festival Sinemakom 2024.",
+        "National award-winning short film director, 1st Place at Festival Sinemakom 2024.",
     },
     {
       icon: "camera",
@@ -104,7 +104,7 @@ export const DATA = {
       icon: "tv",
       title: "Broadcasting",
       description:
-        "Camera person intern at TV9 Nusantara — live production and broadcast workflows.",
+        "Camera person intern at TV9 Nusantara, working on live production and broadcast workflows.",
     },
   ],
 
@@ -179,7 +179,7 @@ export const DATA = {
       start: "Sep 2024",
       end: "Dec 2024",
       description:
-        "Supported creative media production and digitalization initiatives for the Vocational Faculty student executive board — from the Netcity 3.0 program and coordinating the Kampung Merdeka community service media team, to covering the Magang Merdeka closing party.",
+        "Supported creative media production and digitalization initiatives for the Vocational Faculty student executive board, from the Netcity 3.0 program and coordinating the Kampung Merdeka community service media team to covering the Magang Merdeka closing party.",
     },
     {
       company: "UKM Fotografi UNAIR",
@@ -201,7 +201,7 @@ export const DATA = {
       start: "Sep 2024",
       end: "Nov 2024",
       description:
-        "Trained in cinematography and end-to-end video production at UNAIR's cinematography club — from directing and camera work to editing short-form visual storytelling.",
+        "Trained in cinematography and end-to-end video production at UNAIR's cinematography club, from directing and camera work to editing short-form visual storytelling.",
     },
     {
       company: "TV9 Nusantara",
@@ -220,15 +220,14 @@ export const DATA = {
     {
       school: "Universitas Airlangga",
       href: "https://www.unair.ac.id",
-      degree:
-        "D4 (Applied Bachelor) of Information Technology — GPA 3.66/4.00",
+      degree: "D4 (Applied Bachelor) of Information Technology, GPA 3.66/4.00",
       start: "2024",
       end: "2028",
     },
     {
       school: "SMKN 1 Mojokerto",
       href: "https://smkn1mjk.sch.id",
-      degree: "Vocational High School — Multimedia & Broadcast Track",
+      degree: "Vocational High School, Multimedia & Broadcast Track",
       start: "2021",
       end: "2024",
     },
@@ -291,7 +290,7 @@ export const DATA = {
       dates: "Jun 2026",
       active: true,
       description:
-        "Integrated information system prototype for SWK Srikana Food Walk UNAIR — a React 19 + Vite frontend implementing 11 web-framework modules including SSE, NFC, Geolocation, QR, and a payment gateway.",
+        "Integrated information system prototype for SWK Srikana Food Walk UNAIR, a React 19 + Vite frontend implementing 11 web-framework modules including SSE, NFC, Geolocation, QR, and a payment gateway.",
       technologies: ["React", "Vite", "SSE", "NFC", "Geolocation", "QR"],
       links: [
         {
@@ -313,7 +312,7 @@ export const DATA = {
       dates: "Apr 2026",
       active: true,
       description:
-        "A modern, intuitive, and fun personal finance manager designed for Indonesian Gen-Z — track expenses, set budgets, and reach savings goals with a delightful UI.",
+        "A personal finance manager for Indonesian Gen-Z. Track expenses, set budgets, and reach savings goals in a playful, readable interface.",
       technologies: ["Next.js", "TypeScript", "TailwindCSS"],
       links: [
         {
@@ -335,7 +334,7 @@ export const DATA = {
       dates: "Apr 2026",
       active: false,
       description:
-        "A Flutter-based mobile application for managing helpdesk ticketing systems — from ticket creation and assignment to resolution tracking, built for the Mobile Application Programming course.",
+        "A Flutter-based mobile application for managing helpdesk ticketing systems, from ticket creation and assignment through resolution tracking. Built for the Mobile Application Programming course.",
       technologies: ["Flutter", "Dart"],
       links: [
         {
@@ -403,7 +402,7 @@ export const DATA = {
       dates: "Aug 2026",
       active: true,
       description:
-        "Coursework & modules for Advanced Backend Programming at Universitas Airlangga — REST APIs with Go/Fiber backed by PostgreSQL, MongoDB, and Redis, complete with testing, Swagger docs, and Docker.",
+        "Coursework and modules for Advanced Backend Programming at Universitas Airlangga. REST APIs with Go/Fiber backed by PostgreSQL, MongoDB, and Redis, complete with testing, Swagger docs, and Docker.",
       technologies: ["Go", "Fiber", "PostgreSQL", "MongoDB", "Redis", "Docker", "Swagger"],
       links: [
         {
@@ -420,7 +419,7 @@ export const DATA = {
       dates: "May 2026",
       active: true,
       description:
-        "An integrated EdTech platform (Creative, Technology, and Business) bridging the gap between academic theory and industry needs — complete UI design plus a responsive landing page.",
+        "An integrated EdTech platform (Creative, Technology, and Business) that connects academic coursework with industry practice, including a complete UI design and a responsive landing page.",
       technologies: ["Next.js", "TypeScript", "TailwindCSS", "UI/UX"],
       links: [
         {
@@ -440,7 +439,7 @@ export const DATA = {
 
   achievements: [
     {
-      title: "1st Place — National Short Film Competition",
+      title: "1st Place, National Short Film Competition",
       dates: "Jul 2024",
       place: "Festival Sinemakom",
       description:
@@ -454,23 +453,23 @@ export const DATA = {
       dates: "May 2024",
       place: "UNHASY Festival Cinema",
       description:
-        "Won 3rd place for Best Family Short Film at UNHASY Festival Cinema, an inter-campus film festival — the second national award in a year of filmmaking.",
+        "Won 3rd place for Best Family Short Film at UNHASY Festival Cinema, an inter-campus film festival, and my second national award in a year of filmmaking.",
       images: ["/images/award_unhasy.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/honors/",
       win: "3rd Place Winner",
     },
     {
-      title: "BNSP Certified — Digital Marketer",
+      title: "BNSP Certified Digital Marketer",
       dates: "2024",
       place: "Badan Nasional Sertifikasi Profesi",
       description:
-        "Nationally certified by Indonesia's Professional Certification Authority (BNSP) as a Digital Marketer — covering digital strategy, campaign management, and analytics.",
+        "Nationally certified by Indonesia's Professional Certification Authority (BNSP) as a Digital Marketer, covering digital strategy, campaign management, and analytics.",
       images: ["/images/cert_bnsp_dm.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
       win: "Competency Certified",
     },
     {
-      title: "BNSP Certified — Graphic & Multimedia Designer",
+      title: "BNSP Certified Graphic & Multimedia Designer",
       dates: "2024",
       place: "Badan Nasional Sertifikasi Profesi",
       description:
@@ -484,13 +483,13 @@ export const DATA = {
       dates: "2024",
       place: "Industry Training",
       description:
-        "Professional certification in audio & video processing techniques — the backbone of my filmmaking and motion design craft.",
+        "Professional certification in audio and video processing techniques, the foundation of my filmmaking and motion design work.",
       images: ["/images/cert_audiovideo.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
       win: "Certified",
     },
     {
-      title: "Courses & Bootcamps — 11+ Certificates",
+      title: "Courses & Bootcamps: 11+ Certificates",
       dates: "2023 - 2026",
       place: "Dicoding · Digital Talent Scholarship · Others",
       description:

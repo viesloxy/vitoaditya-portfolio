@@ -22,7 +22,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(DATA.url),
   title: {
-    default: `${DATA.name} — Software Engineer & Creative Designer`,
+    default: `${DATA.name} | Software Engineer & Creative Designer`,
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "UI/UX Designer",
   ],
   openGraph: {
-    title: `${DATA.name} — Software Engineer & Creative Designer`,
+    title: `${DATA.name} | Software Engineer & Creative Designer`,
     description: DATA.description,
     url: DATA.url,
     siteName: `${DATA.name}`,
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: `${DATA.name} — Software Engineer & Creative Designer`,
+    title: `${DATA.name} | Software Engineer & Creative Designer`,
     description: DATA.description,
     card: "summary_large_image",
   },

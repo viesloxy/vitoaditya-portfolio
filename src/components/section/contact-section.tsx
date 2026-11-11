@@ -31,7 +31,7 @@ export default function ContactSection() {
         </h2>
         <p className="max-w-lg text-balance text-muted-foreground">
           Whether it&apos;s a project, an internship, or just a chat about
-          design and engineering — my inbox is always open. I&apos;ll get back
+          design and engineering, my inbox is always open. I&apos;ll get back
           to you as soon as I can.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">

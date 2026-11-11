@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Fully static portfolio — cacheComponents (dynamicIO) is not needed here and
+  // Fully static portfolio: cacheComponents (dynamicIO) is not needed here and
   // would force Suspense boundaries around trivial dynamic reads (new Date() in footer).
   cacheComponents: false,
   turbopack: {

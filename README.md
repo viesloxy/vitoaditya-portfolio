@@ -1,27 +1,27 @@
-# Vito Aditya — Portfolio v2
+# Vito Aditya
 
-> Software Engineer & Creative Designer — *where beautiful design meets robust logic.*
+> Software Engineer & Creative Designer based in Surabaya, Indonesia.
 
-Personal portfolio website inspired by the [magicuidesign/portfolio](https://github.com/magicuidesign/portfolio) template, rebuilt for **Vito Aditya** with Next.js 16, Tailwind CSS v4, and a collection of hand-written Magic UI-style components.
+Personal portfolio website for **Vito Aditya**, built with Next.js 16, Tailwind CSS v4, and a collection of hand-written Magic UI-style components.
 
-**Live (old):** https://vitoaditya-portfolio-2026.netlify.app/
+**Live:** https://vitoaditya.my.id
 **GitHub:** https://github.com/viesloxy
 
 ---
 
 ## ✨ Features
 
-- **Dock navbar** — macOS-style magnifying dock (Magic UI `dock`) with tooltips for navigation, socials, and theme toggle.
-- **Dark mode first** — `next-themes` with a clean oklch token system (shadcn-style), light mode included.
-- **Hero** — blur-fade text reveal, rotating role ticker, avatar with orbiting social icons, animated shiny-text availability badge.
-- **Tech marquee** — two opposite-direction infinite marquees with 24 real brand icons (simple-icons) + fade masks.
-- **About** — markdown summary with inline links + animated number-ticker stats (GPA 3.66, 23+ repos, 2× film awards, 3+ BNSP certs).
-- **Experience** — expandable accordion timeline of organization roles (HIMTI, BEM FV UNAIR, UKM Fotografi, UKM Sinematografi, TV9 Nusantara).
-- **Education** — Universitas Airlangga (D4 Teknologi Informasi, 2024–2028) & SMKN 1 Mojokerto.
-- **Projects** — 10 real GitHub projects with screenshots, tech badges, live-demo/source links, and an animated border-beam on the featured card.
-- **Achievements** — awards & certifications grid with real photos (1st place Festival Sinemakom, UNHASY, BNSP Digital Marketer, BNSP Graphic & Multimedia Designer, Audio & Video Processing, 11+ course certificates).
-- **Contact** — cobe-powered rotating globe background + multilingual "Let's work together" word rotator in 10 languages.
-- **SEO ready** — dynamic metadata, generated OpenGraph image (`opengraph-image.tsx`), SVG favicon.
+- **Dock navbar**: macOS-style magnifying dock (Magic UI `dock`) with tooltips for navigation, socials, and theme toggle.
+- **Dark mode first**: `next-themes` with a clean oklch token system (shadcn-style), light mode included.
+- **Hero**: blur-fade text reveal, rotating role ticker, avatar with orbiting social icons, animated shiny-text availability badge.
+- **Tech marquee**: two opposite-direction infinite marquees with 24 real brand icons (simple-icons) plus fade masks.
+- **About**: markdown summary with inline links and animated number-ticker stats (GPA 3.66, 23+ repos, 2× film awards, 3+ BNSP certs).
+- **Experience**: expandable accordion timeline of organization roles (HIMTI, BEM FV UNAIR, UKM Fotografi, UKM Sinematografi, TV9 Nusantara).
+- **Education**: Universitas Airlangga (D4 Teknologi Informasi, 2024-2028) and SMKN 1 Mojokerto.
+- **Projects**: 10 real GitHub projects with screenshots, tech badges, live demo and source links, plus an animated border beam on the featured card.
+- **Achievements**: awards and certifications grid with real photos (1st place Festival Sinemakom, UNHASY, BNSP Digital Marketer, BNSP Graphic & Multimedia Designer, Audio & Video Processing, 11+ course certificates).
+- **Contact**: cobe-powered rotating globe background and a multilingual "Let's work together" word rotator in 10 languages.
+- **SEO ready**: dynamic metadata, generated OpenGraph image (`opengraph-image.tsx`), SVG favicon.
 - **Magic UI components** (hand-implemented): `blur-fade`, `blur-fade-text`, `dock`, `flickering-grid`, `marquee`, `number-ticker`, `word-rotate`, `animated-shiny-text`, `border-beam`, `orbiting-circles`, `dot-pattern`, `globe`, `shimmer-button`.
 
 ## 🛠️ Tech Stack
@@ -50,13 +50,13 @@ npm start
 
 ## ✏️ Editing Content
 
-Everything personal lives in **one file**: [`src/data/resume.tsx`](src/data/resume.tsx) — name, bio, skills, experience, education, projects, achievements, socials, stats, and languages. Edit there and the whole site updates.
+Everything personal lives in **one file**: [`src/data/resume.tsx`](src/data/resume.tsx). It holds the name, bio, skills, experience, education, projects, achievements, socials, stats, and languages, so editing it updates the whole site.
 
 - Avatar: `public/me.jpg`
 - Achievement photos: `public/images/*.jpg`
 - Project screenshots: `public/images/projects/*.jpg`
 - Tech brand icons: `public/icons/*.svg` (downloaded from simple-icons)
-- Section labels & languages: also in `src/data/resume.tsx`
+- Section labels and languages: also in `src/data/resume.tsx`
 
 ## 📁 Structure
 
@@ -74,24 +74,24 @@ src/
 │   ├── section/              # Projects, Work, Achievements, Contact sections
 │   ├── ui/                   # shadcn-style primitives (button, badge, avatar, accordion, …)
 │   ├── navbar.tsx            # Dock navbar
-│   ├── project-card.tsx      # Project card w/ border beam + fallback pattern
+│   ├── project-card.tsx      # Project card with border beam and fallback pattern
 │   ├── tech-icon.tsx         # simple-icons loader
 │   └── icons.tsx             # Brand SVG icons
 ├── data/
-│   └── resume.tsx            # ⭐ ALL personal data — edit this
+│   └── resume.tsx            # ⭐ All personal data, edit this
 └── lib/
     └── utils.ts              # cn()
 ```
 
 ## 📄 Data Notes
 
-Content was migrated from portfolio v1 (React/Vite) and the GitHub profile (`viesloxy`):
+All content comes from my own profile and repositories (`viesloxy`):
 
 - LinkedIn: https://www.linkedin.com/in/vitoaditya/
 - Email: vitoaditya42@gmail.com
 - Resume (Google Drive): https://drive.google.com/file/d/1Bdm-hVJQkhXLvfqbIjmAOvNPF-jF0q1D/view
 - Project dates are taken from each repository's creation date.
-- The HIMTI start date is shown as **Feb 2025** (v1 listed "Feb 2024", which predates the 2024 college intake — assumed typo). Change it back in `resume.tsx` if needed.
+- The HIMTI start date is shown as **Feb 2025**. Change it in `resume.tsx` if needed.
 
 ## 📄 License
 
