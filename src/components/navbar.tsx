@@ -8,13 +8,14 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { DATA } from "@/data/resume";
+import { useLang } from "@/components/language-provider";
 import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
+  const { lang, setLang, copy, t } = useLang();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Navbar() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30 origin-bottom scale-[0.82] sm:scale-100">
       <Dock className="z-50 pointer-events-auto relative h-14 w-fit mx-auto gap-2 rounded-3xl border bg-card/95 p-2 shadow-[0_0_10px_3px] shadow-primary/5 backdrop-blur-3xl">
-        {DATA.navbar.map((item) => {
+        {copy.navbar.map((item) => {
           const isExternal = item.href.startsWith("http");
           return (
             <Tooltip key={item.href}>
@@ -52,7 +53,7 @@ export default function Navbar() {
           );
         })}
         <Separator orientation="vertical" className="h-2/3 m-auto w-px bg-border" />
-        {Object.entries(DATA.contact.social)
+        {Object.entries(copy.contact.social)
           .filter(([, social]) => social.navbar)
           .map(([name, social], index) => {
             const isExternal = social.url.startsWith("http");
@@ -75,7 +76,7 @@ export default function Navbar() {
                   sideOffset={8}
                   className="rounded-xl bg-primary px-4 py-2 text-sm text-primary-foreground shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
                 >
-                  <p>{name}</p>
+                  <p>{social.name}</p>
                   <TooltipArrow className="fill-primary" />
                 </TooltipContent>
               </Tooltip>
@@ -86,13 +87,39 @@ export default function Navbar() {
           <TooltipTrigger asChild>
             <button
               type="button"
+              onClick={() => setLang(lang === "en" ? "id" : "en")}
+              aria-label={
+                lang === "en" ? "Beralih ke Bahasa Indonesia" : "Switch to English"
+              }
+            >
+              <DockIcon className="cursor-pointer rounded-full border border-border bg-background p-0 text-xs font-bold text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
+                <span className="flex size-full items-center justify-center">
+                  {lang === "en" ? "ID" : "EN"}
+                </span>
+              </DockIcon>
+            </button>
+          </TooltipTrigger>
+          <TooltipContent
+            side="top"
+            sideOffset={8}
+            className="rounded-xl bg-primary px-4 py-2 text-sm text-primary-foreground shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
+          >
+            <p>{lang === "en" ? "Bahasa Indonesia" : "Switch to English"}</p>
+            <TooltipArrow className="fill-primary" />
+          </TooltipContent>
+        </Tooltip>
+        <Separator orientation="vertical" className="h-2/3 m-auto w-px bg-border" />
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+              type="button"
               onClick={() =>
                 setTheme(resolvedTheme === "dark" ? "light" : "dark")
               }
               aria-label={
                 mounted && resolvedTheme === "dark"
-                  ? "Switch to light mode"
-                  : "Switch to dark mode"
+                  ? t("Switch to light mode", "Beralih ke mode terang")
+                  : t("Switch to dark mode", "Beralih ke mode gelap")
               }
             >
               <DockIcon className="cursor-pointer rounded-full border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
@@ -111,8 +138,8 @@ export default function Navbar() {
           >
             <p>
               {mounted && resolvedTheme === "dark"
-                ? "Switch to light mode"
-                : "Switch to dark mode"}
+                ? t("Switch to light mode", "Beralih ke mode terang")
+                : t("Switch to dark mode", "Beralih ke mode gelap")}
             </p>
             <TooltipArrow className="fill-primary" />
           </TooltipContent>

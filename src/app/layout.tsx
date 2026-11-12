@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { LanguageProvider } from "@/components/language-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
@@ -75,6 +76,7 @@ export default function RootLayout({
           geistMono.variable
         )}
       >
+        <LanguageProvider>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -102,6 +104,7 @@ export default function RootLayout({
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
+        </LanguageProvider>
       </body>
     </html>
   );

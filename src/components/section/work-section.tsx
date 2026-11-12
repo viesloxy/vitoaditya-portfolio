@@ -2,7 +2,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { DATA } from "@/data/resume";
+import { useLang } from "@/components/language-provider";
 import {
   BriefcaseBusinessIcon,
   CameraIcon,
@@ -35,8 +35,9 @@ function OrgLogo({ alt }: { alt: string }) {
 }
 
 export default function WorkSection() {
+  const { copy, t } = useLang();
   const [open, setOpen] = useState<string>(
-    DATA.work[0]?.company ?? ""
+    copy.work[0]?.company ?? ""
   );
 
   return (
@@ -47,7 +48,7 @@ export default function WorkSection() {
       onValueChange={setOpen}
       className="grid w-full gap-6"
     >
-      {DATA.work.map((work) => (
+      {copy.work.map((work) => (
         <AccordionItem
           key={work.company}
           value={work.company}
@@ -85,7 +86,7 @@ export default function WorkSection() {
               </div>
               <div className="flex flex-none items-center gap-1 text-right text-xs tabular-nums text-muted-foreground">
                 <span>
-                  {work.start} - {work.end ?? "Present"}
+                  {work.start} - {work.end ?? t("Present", "Sekarang")}
                 </span>
               </div>
             </div>

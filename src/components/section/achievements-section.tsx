@@ -5,6 +5,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { useLang } from "@/components/language-provider";
 import { ArrowUpRightIcon, TrophyIcon } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
@@ -111,6 +112,7 @@ function AchievementCard({
 }
 
 export default function AchievementsSection() {
+  const { copy, t } = useLang();
   return (
     <section id="achievements">
       <div className="flex min-h-0 flex-col gap-y-8">
@@ -119,23 +121,25 @@ export default function AchievementsSection() {
             <div className="h-px flex-1 bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
             <div className="z-10 rounded-xl border bg-primary px-4 py-1">
               <span className="text-sm font-medium text-background">
-                Achievements
+                {t("Achievements", "Prestasi")}
               </span>
             </div>
             <div className="h-px flex-1 bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col items-center justify-center gap-y-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Awards & Certifications
+              {t("Awards & Certifications", "Penghargaan & Sertifikasi")}
             </h2>
             <p className="text-balance text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-              National filmmaking honors, BNSP professional certifications, and
-              continuous learning.
+              {t(
+                "National filmmaking honors, BNSP professional certifications, and continuous learning.",
+                "Penghargaan film tingkat nasional, sertifikasi profesional BNSP, dan pembelajaran berkelanjutan."
+              )}
             </p>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {DATA.achievements.map((achievement, index) => (
+          {copy.achievements.map((achievement, index) => (
             <BlurFade
               key={achievement.title}
               delay={BLUR_FADE_DELAY * 14 + index * 0.05}

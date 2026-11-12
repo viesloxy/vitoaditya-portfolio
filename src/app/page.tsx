@@ -1,3 +1,5 @@
+"use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { Marquee } from "@/components/magicui/marquee";
@@ -10,7 +12,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { DATA } from "@/data/resume";
+import { useLang } from "@/components/language-provider";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
 import AchievementsSection from "@/components/section/achievements-section";
@@ -43,6 +45,8 @@ const INTEREST_ICONS: Record<string, React.ComponentType<{ className?: string }>
 };
 
 export default function Page() {
+  const { copy, t } = useLang();
+
   return (
     <main className="relative flex min-h-dvh flex-col gap-14">
       {/* ============================== HERO ============================== */}
@@ -55,23 +59,26 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name}`}
+                text={t(
+                  `Hi, I'm ${copy.name}`,
+                  `Halo, saya ${copy.name}`
+                )}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 2} inView>
                 <div className="text-lg font-medium text-foreground lg:text-xl">
-                  <WordRotate words={DATA.roles} />
+                  <WordRotate words={copy.roles} />
                 </div>
               </BlurFade>
               <BlurFadeText
                 className="max-w-[600px] text-muted-foreground md:text-lg lg:text-xl"
                 delay={BLUR_FADE_DELAY * 2}
-                text={DATA.description}
+                text={copy.description}
               />
               <BlurFade delay={BLUR_FADE_DELAY * 4} inView>
                 <div className="flex flex-wrap items-center gap-3 pt-2">
                   <Button className="group gap-2" asChild>
-                    <Link href={`mailto:${DATA.contact.email}`}>
-                      Get in touch
+                    <Link href={`mailto:${copy.contact.email}`}>
+                      {t("Get in touch", "Hubungi saya")}
                       <ArrowRightIcon
                         className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
                         aria-hidden
@@ -80,19 +87,19 @@ export default function Page() {
                   </Button>
                   <Button variant="outline" className="gap-2" asChild>
                     <a
-                      href={DATA.resumeUrl}
+                      href={copy.resumeUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <DownloadIcon className="size-4" aria-hidden />
-                      Download Resume
+                      {t("Download Resume", "Unduh CV")}
                     </a>
                   </Button>
                   <div className="flex items-center gap-1">
                     {(
                       [
-                        ["GitHub", DATA.contact.social.GitHub.url],
-                        ["LinkedIn", DATA.contact.social.LinkedIn.url],
+                        ["GitHub", copy.contact.social.GitHub.url],
+                        ["LinkedIn", copy.contact.social.LinkedIn.url],
                       ] as const
                     ).map(([label, url]) => (
                       <Button
@@ -121,19 +128,22 @@ export default function Page() {
               <BlurFade delay={BLUR_FADE_DELAY * 5} inView>
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-1 text-sm text-muted-foreground">
                   <Link
-                    href={DATA.locationLink}
+                    href={copy.locationLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 transition-colors hover:text-foreground"
                   >
                     <MapPinIcon className="size-3.5" aria-hidden />
-                    {DATA.location}
+                    {copy.location}
                   </Link>
                   <span className="text-border">|</span>
                   <span className="flex items-center gap-1">
                     <SparklesIcon className="size-3.5 text-amber-500" aria-hidden />
                     <AnimatedShinyText className="text-sm">
-                      Open for internships & freelance
+                      {t(
+                        "Open for internships & freelance",
+                        "Terbuka untuk magang & freelance"
+                      )}
                     </AnimatedShinyText>
                   </span>
                 </div>
@@ -152,8 +162,8 @@ export default function Page() {
                   <Icons.linkedin className="size-4" aria-hidden />
                 </OrbitingCircles>
                 <Avatar className="z-10 size-24 rounded-full border shadow-lg ring-4 ring-muted md:size-28">
-                  <AvatarImage src={DATA.avatarUrl} alt={DATA.name} />
-                  <AvatarFallback>{DATA.initials}</AvatarFallback>
+                  <AvatarImage src={copy.avatarUrl} alt={copy.name} />
+                  <AvatarFallback>{copy.initials}</AvatarFallback>
                 </Avatar>
               </div>
             </BlurFade>
@@ -166,11 +176,14 @@ export default function Page() {
         <BlurFade delay={BLUR_FADE_DELAY * 6} inView>
           <div className="flex flex-col gap-3">
             <p className="text-center text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              Tools &amp; technologies I play with
+              {t(
+                "Tools & technologies I play with",
+                "Tools & teknologi yang saya pakai"
+              )}
             </p>
             <div className="mask-fade-x -mx-2">
               <Marquee pauseOnHover className="[--duration:28s]">
-                {DATA.skills.map((skill) => (
+                {copy.skills.map((skill) => (
                   <div
                     key={skill.name}
                     className="flex items-center gap-2 rounded-lg border bg-background/80 px-3 py-1.5 text-sm font-medium shadow-sm backdrop-blur"
@@ -187,7 +200,7 @@ export default function Page() {
             </div>
             <div className="mask-fade-x -mx-2">
               <Marquee pauseOnHover reverse className="[--duration:32s]">
-                {DATA.designSkills.map((skill) => (
+                {copy.designSkills.map((skill) => (
                   <div
                     key={skill}
                     className="flex items-center gap-2 rounded-lg border bg-background/80 px-3 py-1.5 text-sm font-medium shadow-sm backdrop-blur"
@@ -206,15 +219,15 @@ export default function Page() {
       <section id="about">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 7} inView>
-            <h2 className="text-xl font-bold">About</h2>
+            <h2 className="text-xl font-bold">{t("About", "Tentang")}</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 8} inView>
             <div className="prose max-w-full font-sans leading-relaxed text-pretty">
-              <Markdown>{DATA.summary}</Markdown>
+              <Markdown>{copy.summary}</Markdown>
             </div>
           </BlurFade>
           <div className="grid grid-cols-2 gap-3 pt-4 sm:grid-cols-4">
-            {DATA.stats.map((stat, index) => (
+            {copy.stats.map((stat, index) => (
               <BlurFade key={stat.label} delay={BLUR_FADE_DELAY * 9 + index * 0.05} inView>
                 <div className="flex flex-col items-center gap-1 rounded-xl border bg-card px-3 py-4 text-center shadow-sm">
                   <div className="flex items-baseline gap-0.5 text-2xl font-bold tabular-nums">
@@ -240,7 +253,7 @@ export default function Page() {
       <section id="experience">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 10} inView>
-            <h2 className="text-xl font-bold">Experience</h2>
+            <h2 className="text-xl font-bold">{t("Experience", "Pengalaman")}</h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 11} inView>
             <WorkSection />
@@ -252,10 +265,10 @@ export default function Page() {
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-6">
           <BlurFade delay={BLUR_FADE_DELAY * 12} inView>
-            <h2 className="text-xl font-bold">Education</h2>
+            <h2 className="text-xl font-bold">{t("Education", "Pendidikan")}</h2>
           </BlurFade>
           <div className="flex flex-col gap-8">
-            {DATA.education.map((education, index) => (
+            {copy.education.map((education, index) => (
               <BlurFade
                 key={education.school}
                 delay={BLUR_FADE_DELAY * 13 + index * 0.05}
@@ -312,12 +325,12 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 14} inView>
             <h2 className="flex items-center gap-2 text-xl font-bold">
               <WrenchIcon className="size-4 text-muted-foreground" aria-hidden />
-              Skills
+              {t("Skills", "Keahlian")}
             </h2>
           </BlurFade>
           <div className="flex flex-col gap-5">
             <div className="flex flex-wrap gap-2">
-              {DATA.skills.map((skill, id) => (
+              {copy.skills.map((skill, id) => (
                 <BlurFade
                   key={skill.name}
                   delay={BLUR_FADE_DELAY * 15 + id * 0.02}
@@ -341,7 +354,7 @@ export default function Page() {
               <Separator className="bg-border/60" />
             </BlurFade>
             <div className="flex flex-wrap gap-2">
-              {DATA.designSkills.map((skill, id) => (
+              {copy.designSkills.map((skill, id) => (
                 <BlurFade
                   key={skill}
                   delay={BLUR_FADE_DELAY * 16 + id * 0.03}
@@ -369,11 +382,11 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 16} inView>
             <h2 className="flex items-center gap-2 text-xl font-bold">
               <SparklesIcon className="size-4 text-muted-foreground" aria-hidden />
-              Beyond the Code
+              {t("Beyond the Code", "Di Balik Kode")}
             </h2>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            {DATA.interests.map((interest, id) => {
+            {copy.interests.map((interest, id) => {
               const InterestIcon =
                 INTEREST_ICONS[interest.icon] ?? SparklesIcon;
               return (
@@ -423,10 +436,11 @@ export default function Page() {
       <BlurFade delay={BLUR_FADE_DELAY * 20} inView>
         <footer className="flex flex-col items-center justify-between gap-3 border-t pt-6 text-xs text-muted-foreground sm:flex-row">
           <p>
-            © {new Date().getFullYear()} {DATA.name}. All rights reserved.
+            © {new Date().getFullYear()} {copy.name}.{" "}
+            {t("All rights reserved.", "Seluruh hak cipta dilindungi.")}
           </p>
           <p className="flex items-center gap-1">
-            Built with{" "}
+            {t("Built with", "Dibangun dengan")}{" "}
             <Badge variant="outline" className="h-5 px-1.5 text-[10px] font-medium">
               Next.js
             </Badge>

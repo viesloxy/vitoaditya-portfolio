@@ -1,6 +1,8 @@
+"use client";
+
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
-import { DATA } from "@/data/resume";
+import { useLang } from "@/components/language-provider";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -8,6 +10,8 @@ import { Button } from "@/components/ui/button";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function ProjectsSection() {
+  const { copy, t } = useLang();
+
   return (
     <section id="projects">
       <div className="flex min-h-0 flex-col gap-y-8">
@@ -16,23 +20,25 @@ export default function ProjectsSection() {
             <div className="h-px flex-1 bg-linear-to-r from-transparent from-5% via-border via-95% to-transparent" />
             <div className="z-10 rounded-xl border bg-primary px-4 py-1">
               <span className="text-sm font-medium text-background">
-                My Projects
+                {t("My Projects", "Proyek Saya")}
               </span>
             </div>
             <div className="h-px flex-1 bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col items-center justify-center gap-y-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Check out my latest work
+              {t("Check out my latest work", "Lihat karya terbaru saya")}
             </h2>
             <p className="text-balance text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">
-              From open-source UMKM tools to AI platforms and award-winning
-              class projects, here are a few of my favorites.
+              {t(
+                "From open-source UMKM tools to AI platforms and award-winning class projects, here are a few of my favorites.",
+                "Dari tools UMKM open source sampai platform AI dan proyek kelas yang meraih penghargaan, berikut beberapa favorit saya."
+              )}
             </p>
           </div>
         </div>
         <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2">
-          {DATA.projects.map((project, id) => (
+          {copy.projects.map((project, id) => (
             <BlurFade
               key={project.title}
               delay={BLUR_FADE_DELAY * 12 + id * 0.05}
@@ -62,7 +68,10 @@ export default function ProjectsSection() {
                 rel="noopener noreferrer"
               >
                 <Icons.github className="size-4" aria-hidden />
-                See all 23+ repositories on GitHub
+                {t(
+                  "See all 23+ repositories on GitHub",
+                  "Lihat 23+ repository di GitHub"
+                )}
               </Link>
             </Button>
           </div>
