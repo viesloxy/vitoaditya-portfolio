@@ -51,6 +51,7 @@ export default function Page() {
           <div className="flex flex-col justify-between gap-2 gap-y-6 md:flex-row">
             <div className="order-2 flex flex-col gap-2 md:order-1">
               <BlurFadeText
+                as="h1"
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}

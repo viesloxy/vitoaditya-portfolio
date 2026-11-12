@@ -87,7 +87,7 @@ export default async function Image() {
                 fontSize: 24,
               }}
             >
-              vitoaditya-portfolio-2026.netlify.app
+              vitoaditya.my.id
             </div>
           </div>
           <div

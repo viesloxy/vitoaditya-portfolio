@@ -2,11 +2,12 @@
 
 import { cn } from "@/lib/utils";
 import { motion, Variants } from "motion/react";
-import { useMemo } from "react";
+import { useMemo, type ElementType } from "react";
 
 interface BlurFadeTextProps {
   text: string;
   className?: string;
+  as?: ElementType;
   variant?: {
     hidden: { y: number };
     visible: { y: number };
@@ -20,6 +21,7 @@ interface BlurFadeTextProps {
 const BlurFadeText = ({
   text,
   className,
+  as = "div",
   variant,
   duration = 0.4,
   characterDelay = 0.03,
@@ -27,6 +29,7 @@ const BlurFadeText = ({
   yOffset = 8,
   animateByCharacter = false,
 }: BlurFadeTextProps) => {
+  const Tag = as;
   const defaultVariants: Variants = {
     hidden: { y: -yOffset, opacity: 0, filter: "blur(8px)" },
     visible: { y: 0, opacity: 1, filter: "blur(0px)" },
@@ -36,7 +39,7 @@ const BlurFadeText = ({
 
   if (animateByCharacter) {
     return (
-      <div className="flex">
+      <Tag className="flex">
         {characters.map((char, i) => {
           const charVariants: Variants = {
             hidden: { y: -yOffset, opacity: 0, filter: "blur(8px)" },
@@ -60,12 +63,12 @@ const BlurFadeText = ({
             </motion.span>
           );
         })}
-      </div>
+      </Tag>
     );
   }
 
   return (
-    <div className="flex">
+    <Tag className="flex">
       <motion.span
         initial="hidden"
         animate="visible"
@@ -79,7 +82,7 @@ const BlurFadeText = ({
       >
         {text}
       </motion.span>
-    </div>
+    </Tag>
   );
 };
 
