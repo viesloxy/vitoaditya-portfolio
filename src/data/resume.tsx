@@ -22,10 +22,6 @@ export const DATA = {
   avatarUrl: "/me.jpg",
   resumeUrl:
     "https://drive.google.com/file/d/1Bdm-hVJQkhXLvfqbIjmAOvNPF-jF0q1D/view?usp=sharing",
-  quote: {
-    text: "Design is not a product, but a process.",
-    author: "Bruce Schneier",
-  },
   roles: [
     "Software Engineer",
     "Creative Designer",

@@ -14,7 +14,7 @@ import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 
 export default function Navbar() {
-  const { resolvedTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-4 z-30 origin-bottom scale-[0.82] sm:scale-100">
-      <Dock className="z-50 pointer-events-auto relative h-14 w-fit mx-auto gap-2 rounded-3xl border bg-card/90 p-2 shadow-[0_0_10px_3px] shadow-primary/5 backdrop-blur-3xl">
+      <Dock className="z-50 pointer-events-auto relative h-14 w-fit mx-auto gap-2 rounded-3xl border bg-card/95 p-2 shadow-[0_0_10px_3px] shadow-primary/5 backdrop-blur-3xl">
         {DATA.navbar.map((item) => {
           const isExternal = item.href.startsWith("http");
           return (
@@ -35,8 +35,8 @@ export default function Navbar() {
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noopener noreferrer" : undefined}
                 >
-                  <DockIcon className="cursor-pointer rounded-2xl border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
-                    <item.icon className="size-full rounded-sm overflow-hidden object-contain p-1" />
+                  <DockIcon className="cursor-pointer rounded-full border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
+                    <item.icon className="size-full" />
                   </DockIcon>
                 </a>
               </TooltipTrigger>
@@ -65,8 +65,8 @@ export default function Navbar() {
                     target={isExternal ? "_blank" : undefined}
                     rel={isExternal ? "noopener noreferrer" : undefined}
                   >
-                    <DockIcon className="cursor-pointer rounded-2xl border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
-                      <IconComponent className="size-full rounded-sm overflow-hidden object-contain p-1" />
+                    <DockIcon className="cursor-pointer rounded-full border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
+                      <IconComponent className="size-full" />
                     </DockIcon>
                   </a>
                 </TooltipTrigger>
@@ -84,20 +84,36 @@ export default function Navbar() {
         <Separator orientation="vertical" className="h-2/3 m-auto w-px bg-border" />
         <Tooltip>
           <TooltipTrigger asChild>
-            <DockIcon className="cursor-pointer rounded-2xl border border-border bg-background p-1 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
-              {mounted && resolvedTheme === "dark" ? (
-                <SunIcon className="size-full" />
-              ) : (
-                <MoonIcon className="size-full" />
-              )}
-            </DockIcon>
+            <button
+              type="button"
+              onClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
+              aria-label={
+                mounted && resolvedTheme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
+              }
+            >
+              <DockIcon className="cursor-pointer rounded-full border border-border bg-background p-0 text-muted-foreground backdrop-blur-3xl transition-colors hover:bg-muted hover:text-foreground">
+                {mounted && resolvedTheme === "dark" ? (
+                  <SunIcon className="size-full" />
+                ) : (
+                  <MoonIcon className="size-full" />
+                )}
+              </DockIcon>
+            </button>
           </TooltipTrigger>
           <TooltipContent
             side="top"
             sideOffset={8}
             className="rounded-xl bg-primary px-4 py-2 text-sm text-primary-foreground shadow-[0_10px_40px_-10px_rgba(0,0,0,0.3)] dark:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.5)]"
           >
-            <p>Theme</p>
+            <p>
+              {mounted && resolvedTheme === "dark"
+                ? "Switch to light mode"
+                : "Switch to dark mode"}
+            </p>
             <TooltipArrow className="fill-primary" />
           </TooltipContent>
         </Tooltip>
