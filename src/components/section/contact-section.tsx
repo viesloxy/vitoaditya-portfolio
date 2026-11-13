@@ -6,7 +6,10 @@ import { useLang } from "@/components/language-provider";
 import Link from "next/link";
 
 export default function ContactSection() {
-  const { copy, t } = useLang();
+  const { copy, t, lang } = useLang();
+
+  const linkClass =
+    "font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary";
 
   return (
     <div className="relative rounded-xl border">
@@ -37,35 +40,63 @@ export default function ContactSection() {
           />
         </h2>
         <p className="max-w-lg text-balance text-muted-foreground">
-          {t(
-            "Whether it's a project, an internship, or just a chat about design and engineering, my inbox is always open. I'll get back to you as soon as I can.",
-            "Entah itu proyek, magang, atau sekadar ngobrol soal desain dan engineering, inbox saya selalu terbuka. Saya akan secepatnya membalas."
+          {lang === "id" ? (
+            <>
+              Entah itu proyek, magang, atau sekadar ngobrol soal desain dan
+              engineering,{" "}
+              <Link href={`mailto:${copy.contact.email}`} className={linkClass}>
+                kirim email
+              </Link>{" "}
+              ke saya, inbox saya selalu terbuka. Kamu juga bisa menjangkau
+              saya lewat{" "}
+              <Link
+                href={copy.contact.social.GitHub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                GitHub
+              </Link>{" "}
+              atau{" "}
+              <Link
+                href={copy.contact.social.LinkedIn.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                LinkedIn
+              </Link>
+              . Saya akan secepatnya membalas.
+            </>
+          ) : (
+            <>
+              Whether it&apos;s a project, an internship, or just a chat about
+              design and engineering,{" "}
+              <Link href={`mailto:${copy.contact.email}`} className={linkClass}>
+                send me an email
+              </Link>
+              {", my inbox is always open. You can also reach me on "}
+              <Link
+                href={copy.contact.social.GitHub.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                GitHub
+              </Link>{" "}
+              or{" "}
+              <Link
+                href={copy.contact.social.LinkedIn.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                LinkedIn
+              </Link>
+              . I&apos;ll get back to you as soon as I can.
+            </>
           )}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
-          <Link
-            href={`mailto:${copy.contact.email}`}
-            className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-          >
-            {t("Send me an email", "Kirim email")}
-          </Link>
-          <Link
-            href={copy.contact.social.GitHub.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-          >
-            GitHub
-          </Link>
-          <Link
-            href={copy.contact.social.LinkedIn.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-          >
-            LinkedIn
-          </Link>
-        </div>
         <p className="text-xs text-muted-foreground">
           {copy.location} · GMT+7 ·{" "}
           {t(

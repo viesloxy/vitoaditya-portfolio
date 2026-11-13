@@ -216,7 +216,7 @@ export const DATA = {
   education: [
     {
       school: "Universitas Airlangga",
-      href: "https://www.unair.ac.id",
+      href: "https://unair.ac.id/",
       degree: "Bachelor of Applied Science, Informatics Engineering",
       start: "Jul 2024",
       end: "Jul 2028",
@@ -224,7 +224,7 @@ export const DATA = {
     },
     {
       school: "SMKN 1 Mojokerto",
-      href: "https://smkn1mjk.sch.id",
+      href: "https://www.smkn1mojokerto.sch.id/",
       degree: "Multimedia",
       start: "Jul 2021",
       end: "May 2024",
