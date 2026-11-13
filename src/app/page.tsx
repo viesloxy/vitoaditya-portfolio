@@ -17,12 +17,12 @@ import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import {
   ArrowRightIcon,
+  BriefcaseIcon,
   DownloadIcon,
   GraduationCapIcon,
   MailIcon,
   MapPinIcon,
   SchoolIcon,
-  SparklesIcon,
 } from "lucide-react";
 import { Icons } from "@/components/icons";
 import Link from "next/link";
@@ -124,7 +124,7 @@ export default function Page() {
                   </Link>
                   <span className="text-border">|</span>
                   <span className="flex items-center gap-1">
-                    <SparklesIcon className="size-3.5 text-amber-500" aria-hidden />
+                    <BriefcaseIcon className="size-3.5" aria-hidden />
                     <AnimatedShinyText className="text-sm">
                       {t(
                         "Open for internships & freelance",

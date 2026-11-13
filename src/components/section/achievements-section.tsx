@@ -97,8 +97,10 @@ function AchievementCard({
           {achievement.description}
         </p>
         <div>
-          <Badge className="gap-1 border-transparent bg-amber-500/15 text-amber-600 shadow-none dark:bg-amber-400/15 dark:text-amber-300">
-            <TrophyIcon className="size-3" aria-hidden />
+          <Badge
+            variant="outline"
+            className="h-6 w-fit border-border px-2 text-[11px] font-medium"
+          >
             {achievement.win}
           </Badge>
         </div>
@@ -131,7 +133,7 @@ export default function AchievementsSection() {
             <div className="h-px flex-1 bg-linear-to-l from-transparent from-5% via-border via-95% to-transparent" />
           </div>
           <div className="flex flex-col items-center justify-center gap-y-3">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+            <h2 className="text-center text-3xl font-bold tracking-tighter sm:text-4xl">
               {t("Awards & Certifications", "Penghargaan & Sertifikasi")}
             </h2>
             <p className="text-balance text-center text-muted-foreground md:text-lg/relaxed lg:text-base/relaxed xl:text-lg/relaxed">

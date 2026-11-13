@@ -16,7 +16,7 @@ export default function ContactSection() {
       {/* Flickering grid background (matching the original template) */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 overflow-hidden rounded-t-xl">
         <FlickeringGrid
-          className="h-full w-full"
+          className="h-full w-full translate-x-px"
           squareSize={2}
           gridGap={2}
           style={{
