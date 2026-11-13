@@ -36,8 +36,8 @@ const WORK_DESCRIPTIONS = [
 ];
 
 const EDUCATION_DEGREES = [
-  "D4 (Sarjana Terapan) Teknologi Informasi, IPK 3,66/4,00",
-  "SMK, Jurusan Multimedia & Broadcasting",
+  "Sarjana Terapan, Teknik Informatika",
+  "Multimedia",
 ];
 
 const PROJECT_DESCRIPTIONS = [
@@ -108,6 +108,7 @@ export const DATA_ID = {
   education: DATA.education.map((item, i) => ({
     ...item,
     degree: EDUCATION_DEGREES[i] ?? item.degree,
+    end: item.end === "May 2024" ? "Mei 2024" : item.end,
   })),
   projects: DATA.projects.map((item, i) => ({
     ...item,

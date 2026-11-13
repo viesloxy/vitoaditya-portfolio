@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import BlurFade from "@/components/magicui/blur-fade";
@@ -209,19 +210,27 @@ export default function Page() {
                   className="group flex items-center justify-between gap-x-3"
                 >
                   <div className="flex min-w-0 flex-1 items-center gap-x-3">
-                    <div className="flex size-8 flex-none items-center justify-center rounded-full border bg-muted p-1 shadow ring-2 ring-border md:size-10">
-                      {index === 0 ? (
-                        <GraduationCapIcon
-                          className="size-4 text-muted-foreground"
-                          aria-hidden
-                        />
-                      ) : (
-                        <SchoolIcon
-                          className="size-4 text-muted-foreground"
-                          aria-hidden
-                        />
-                      )}
-                    </div>
+                    {education.logoUrl ? (
+                      <img
+                        src={education.logoUrl}
+                        alt={education.school}
+                        className="size-8 flex-none overflow-hidden rounded-full border bg-background object-contain p-1 shadow ring-2 ring-border md:size-10"
+                      />
+                    ) : (
+                      <div className="flex size-8 flex-none items-center justify-center rounded-full border bg-muted p-1 shadow ring-2 ring-border md:size-10">
+                        {index === 0 ? (
+                          <GraduationCapIcon
+                            className="size-4 text-muted-foreground"
+                            aria-hidden
+                          />
+                        ) : (
+                          <SchoolIcon
+                            className="size-4 text-muted-foreground"
+                            aria-hidden
+                          />
+                        )}
+                      </div>
+                    )}
                     <div className="flex min-w-0 flex-1 flex-col gap-0.5">
                       <div className="flex items-center gap-2 font-semibold leading-none">
                         {education.school}
