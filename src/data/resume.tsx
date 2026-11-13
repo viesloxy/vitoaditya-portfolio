@@ -16,18 +16,18 @@ export const DATA = {
   locationLink:
     "https://www.google.com/maps/place/Surabaya,+East+Java,+Indonesia",
   description:
-    "Software Engineer & Creative Designer. Informatics student at Universitas Airlangga who builds web applications people actually enjoy using.",
+    "Software Engineer & Creative Designer. Informatics student at Universitas Airlangga with hands-on experience across design, software engineering, AI, data, and cybersecurity.",
   summary:
-    "I'm **Vito Aditya**, a Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Information Technology at Universitas Airlangga](https://www.unair.ac.id) with a 3.66/4.00 GPA. I like working where design and engineering overlap, from [Kulakan](https://kulakan.web.id), an open-source profit and inventory manager for small F&B businesses, to [SiLestari](https://silestari.vercel.app), an AI-powered platform for preserving Indonesia's regional languages. Beyond code, I'm a [national award-winning filmmaker](/#achievements), a [BNSP-certified digital marketer and graphic designer](/#achievements), and an active member of HIMTI Universitas Airlangga.",
+    "I'm **Vito Aditya**, a Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Information Technology at Universitas Airlangga](https://www.unair.ac.id) with a 3.66/4.00 GPA. I have hands-on experience across five fields: design and creative, software engineering, AI and machine learning, data, and cybersecurity. The work I enjoy most sits where software engineering meets creative design, from [Kulakan](https://kulakan.web.id), an open-source profit and inventory manager for small F&B businesses, to [SiLestari](https://silestari.vercel.app), an AI-powered platform for preserving Indonesia's regional languages. Beyond code, I'm a [national award-winning filmmaker](/#achievements) and a [BNSP-certified digital marketer and graphic designer](/#achievements).",
   avatarUrl: "/me.jpg",
   resumeUrl:
     "https://drive.google.com/file/d/1Bdm-hVJQkhXLvfqbIjmAOvNPF-jF0q1D/view?usp=sharing",
   roles: [
-    "Software Engineer",
-    "Creative Designer",
-    "Full-Stack Developer",
-    "UI/UX Designer",
-    "Filmmaker",
+    "Software Engineering",
+    "Design & Creative",
+    "AI & Machine Learning",
+    "Data",
+    "Cybersecurity",
   ],
 
   stats: [
@@ -37,44 +37,80 @@ export const DATA = {
     { label: "BNSP Certifications", value: 3, decimals: 0, suffix: "+" },
   ],
 
-  skills: [
-    { name: "React", icon: "react" },
-    { name: "Next.js", icon: "nextdotjs", invert: true },
-    { name: "TypeScript", icon: "typescript" },
-    { name: "JavaScript", icon: "javascript" },
-    { name: "Node.js", icon: "nodedotjs" },
-    { name: "Express.js", icon: "express" },
-    { name: "Laravel", icon: "laravel" },
-    { name: "PHP", icon: "php" },
-    { name: "Python", icon: "python" },
-    { name: "Go", icon: "go" },
-    { name: "Flutter", icon: "flutter" },
-    { name: "Dart", icon: "dart" },
-    { name: "PostgreSQL", icon: "postgresql" },
-    { name: "MySQL", icon: "mysql" },
-    { name: "MongoDB", icon: "mongodb" },
-    { name: "Redis", icon: "redis" },
-    { name: "Docker", icon: "docker" },
-    { name: "Tailwind CSS", icon: "tailwindcss" },
-    { name: "Git", icon: "git" },
-    { name: "Figma", icon: "figma" },
-    { name: "Framer", icon: "framer", invert: true },
-    { name: "Vite", icon: "vite" },
-    { name: "Streamlit", icon: "streamlit" },
-    { name: "FastAPI", icon: "fastapi" },
-  ],
-
-  designSkills: [
-    "UI Designer",
-    "UX Designer",
-    "Product Designer",
-    "Video Editor",
-    "Motion Designer",
-    "Graphic Designer",
-    "Visual Designer",
-    "Typography",
-    "Illustration",
-    "Icon Designer",
+  skillGroups: [
+    {
+      title: "Design & Creative",
+      tools: [
+        { name: "Figma", icon: "figma" },
+        { name: "Photoshop", icon: "adobephotoshop", invert: true },
+        { name: "Illustrator", icon: "adobeillustrator", invert: true },
+        { name: "Premiere Pro", icon: "adobepremierepro", invert: true },
+        { name: "After Effects", icon: "adobeaftereffects", invert: true },
+        { name: "DaVinci Resolve", icon: "davinciresolve", invert: true },
+        { name: "Blender", icon: "blender" },
+        { name: "Canva", icon: "canva", invert: true },
+      ],
+    },
+    {
+      title: "Software Engineering",
+      tools: [
+        { name: "React", icon: "react" },
+        { name: "Next.js", icon: "nextdotjs", invert: true },
+        { name: "TypeScript", icon: "typescript" },
+        { name: "JavaScript", icon: "javascript" },
+        { name: "Node.js", icon: "nodedotjs" },
+        { name: "Express.js", icon: "express", invert: true },
+        { name: "Laravel", icon: "laravel" },
+        { name: "PHP", icon: "php" },
+        { name: "Python", icon: "python" },
+        { name: "Go", icon: "go" },
+        { name: "Flutter", icon: "flutter" },
+        { name: "Dart", icon: "dart" },
+        { name: "FastAPI", icon: "fastapi" },
+        { name: "Tailwind CSS", icon: "tailwindcss" },
+        { name: "Docker", icon: "docker" },
+        { name: "Git", icon: "git" },
+        { name: "Vite", icon: "vite" },
+      ],
+    },
+    {
+      title: "AI & Machine Learning",
+      tools: [
+        { name: "Python", icon: "python" },
+        { name: "TensorFlow", icon: "tensorflow" },
+        { name: "PyTorch", icon: "pytorch" },
+        { name: "scikit-learn", icon: "scikitlearn" },
+        { name: "Google Colab", icon: "googlecolab" },
+        { name: "Jupyter", icon: "jupyter" },
+        { name: "Hugging Face", icon: "huggingface" },
+        { name: "OpenCV", icon: "opencv" },
+        { name: "Streamlit", icon: "streamlit" },
+      ],
+    },
+    {
+      title: "Data",
+      tools: [
+        { name: "PostgreSQL", icon: "postgresql" },
+        { name: "MySQL", icon: "mysql" },
+        { name: "MongoDB", icon: "mongodb" },
+        { name: "Redis", icon: "redis" },
+        { name: "BigQuery", icon: "googlebigquery" },
+        { name: "Apache Spark", icon: "apachespark" },
+        { name: "Pandas", icon: "pandas", invert: true },
+        { name: "NumPy", icon: "numpy", invert: true },
+      ],
+    },
+    {
+      title: "Cybersecurity",
+      tools: [
+        { name: "Kali Linux", icon: "kalilinux" },
+        { name: "Linux", icon: "linux" },
+        { name: "Wireshark", icon: "wireshark" },
+        { name: "Burp Suite", icon: "burpsuite" },
+        { name: "Metasploit", icon: "metasploit" },
+        { name: "OWASP", icon: "owasp", invert: true },
+      ],
+    },
   ],
 
   interests: [
@@ -88,7 +124,7 @@ export const DATA = {
       icon: "camera",
       title: "Photography",
       description:
-        "Event & creative documentation honed as a Photography Intern at UKM Fotografi UNAIR.",
+        "Event and creative documentation, from campus productions to community programs.",
     },
     {
       icon: "palette",
@@ -146,8 +182,9 @@ export const DATA = {
 
   work: [
     {
-      company: "HIMTI Universitas Airlangga",
+      company: "Himpunan Mahasiswa D4 Teknik Informatika Universitas Airlangga",
       href: "https://www.linkedin.com/in/vitoaditya/",
+      logoUrl: "/images/logo-himti.png",
       badges: [
         "Biztech 2025",
         "HIMTI Cares Vol. 3",
@@ -163,45 +200,9 @@ export const DATA = {
         "Serving as expert staff in the Digital Media & Information department of UNAIR's Informatics student association. Driving publicity, digital publication, and documentation for flagship programs such as Biztech 2025, HIMTI Cares Vol. 3, an institutional study tour to UGM & PENS, member upgrading, and guest lecture series.",
     },
     {
-      company: "BEM Fakultas Vokasi UNAIR",
-      href: "https://www.linkedin.com/in/vitoaditya/",
-      badges: [
-        "Netcity 3.0",
-        "Kampung Merdeka (Koorlap)",
-        "Closing Party Magang Merdeka",
-      ],
-      location: "Surabaya, Indonesia",
-      title: "Staff of Creative Media & Digitalization Dept.",
-      start: "Sep 2024",
-      end: "Dec 2024",
-      description:
-        "Supported creative media production and digitalization initiatives for the Vocational Faculty student executive board, from the Netcity 3.0 program and coordinating the Kampung Merdeka community service media team to covering the Magang Merdeka closing party.",
-    },
-    {
-      company: "UKM Fotografi UNAIR",
-      href: "https://www.linkedin.com/in/vitoaditya/",
-      badges: ["Photography", "Event Documentation", "Creative Visuals"],
-      location: "Surabaya, Indonesia",
-      title: "Photography Intern",
-      start: "Sep 2024",
-      end: "Nov 2024",
-      description:
-        "Interned at UNAIR's photography student club, capturing event documentation and producing creative visuals while sharpening composition, lighting, and photo-editing skills.",
-    },
-    {
-      company: "UKM Sinematografi UNAIR",
-      href: "https://www.linkedin.com/in/vitoaditya/",
-      badges: ["Filmmaking", "Video Production", "Editing"],
-      location: "Surabaya, Indonesia",
-      title: "Cinematography Intern",
-      start: "Sep 2024",
-      end: "Nov 2024",
-      description:
-        "Trained in cinematography and end-to-end video production at UNAIR's cinematography club, from directing and camera work to editing short-form visual storytelling.",
-    },
-    {
       company: "TV9 Nusantara",
       href: "https://www.linkedin.com/in/vitoaditya/",
+      logoUrl: "/images/logo-tv9.png",
       badges: ["Camera Operation", "Broadcasting", "Live Production"],
       location: "Mojokerto, Indonesia",
       title: "Camera Person Intern",

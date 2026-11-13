@@ -10,7 +10,6 @@ import { TechIcon } from "@/components/tech-icon";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { useLang } from "@/components/language-provider";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
@@ -23,7 +22,6 @@ import {
   GraduationCapIcon,
   MailIcon,
   MapPinIcon,
-  PaletteIcon,
   SchoolIcon,
   SparklesIcon,
 } from "lucide-react";
@@ -264,48 +262,37 @@ export default function Page() {
               {t("Skills", "Keahlian")}
             </h2>
           </BlurFade>
-          <div className="flex flex-col gap-5">
-            <div className="flex flex-wrap gap-2">
-              {copy.skills.map((skill, id) => (
-                <BlurFade
-                  key={skill.name}
-                  delay={BLUR_FADE_DELAY * 15 + id * 0.02}
-                >
-                  <div className="flex h-8 w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 ring-2 ring-border/20">
-                    <TechIcon
-                      slug={skill.icon}
-                      name={skill.name}
-                      invert={"invert" in skill ? skill.invert : false}
-                      className="size-4 rounded overflow-hidden object-contain"
-                    />
-                    <span className="text-sm font-medium text-foreground">
-                      {skill.name}
-                    </span>
+          <div className="flex flex-col gap-6">
+            {copy.skillGroups.map((group, gid) => (
+              <BlurFade
+                key={group.title}
+                delay={BLUR_FADE_DELAY * 15 + gid * 0.04}
+              >
+                <div className="flex flex-col gap-2.5">
+                  <h3 className="text-sm font-semibold text-foreground">
+                    {group.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {group.tools.map((tool) => (
+                      <div
+                        key={`${group.title}-${tool.name}`}
+                        className="flex h-8 w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 ring-2 ring-border/20"
+                      >
+                        <TechIcon
+                          slug={tool.icon}
+                          name={tool.name}
+                          invert={"invert" in tool ? tool.invert : false}
+                          className="size-4 rounded overflow-hidden object-contain"
+                        />
+                        <span className="text-sm font-medium text-foreground">
+                          {tool.name}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                </BlurFade>
-              ))}
-            </div>
-            <BlurFade delay={BLUR_FADE_DELAY * 16}>
-              <Separator className="bg-border/60" />
-            </BlurFade>
-            <div className="flex flex-wrap gap-2">
-              {copy.designSkills.map((skill, id) => (
-                <BlurFade
-                  key={skill}
-                  delay={BLUR_FADE_DELAY * 16 + id * 0.03}
-                >
-                  <div className="flex h-8 w-fit items-center gap-2 rounded-xl border border-border bg-muted/50 px-4 ring-2 ring-border/20">
-                    <PaletteIcon
-                      className="size-3.5 text-muted-foreground"
-                      aria-hidden
-                    />
-                    <span className="text-sm font-medium text-foreground">
-                      {skill}
-                    </span>
-                  </div>
-                </BlurFade>
-              ))}
-            </div>
+                </div>
+              </BlurFade>
+            ))}
           </div>
         </div>
       </section>

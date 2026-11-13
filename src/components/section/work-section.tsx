@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -5,31 +6,30 @@ import { Badge } from "@/components/ui/badge";
 import { useLang } from "@/components/language-provider";
 import {
   BriefcaseBusinessIcon,
-  CameraIcon,
   ChevronDown,
   ChevronRight,
-  ClapperboardIcon,
-  GraduationCapIcon,
-  TvIcon,
-  UsersIcon,
-  type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
-const ORG_ICONS: Record<string, LucideIcon> = {
-  "HIMTI Universitas Airlangga": GraduationCapIcon,
-  "BEM Fakultas Vokasi UNAIR": UsersIcon,
-  "UKM Fotografi UNAIR": CameraIcon,
-  "UKM Sinematografi UNAIR": ClapperboardIcon,
-  "TV9 Nusantara": TvIcon,
-};
+function OrgLogo({ alt, logoUrl }: { alt: string; logoUrl?: string }) {
+  if (logoUrl) {
+    return (
+      <img
+        src={logoUrl}
+        alt={alt}
+        loading="lazy"
+        className="size-8 flex-none rounded-full border bg-background object-contain p-0.5 shadow ring-2 ring-border md:size-10"
+      />
+    );
+  }
 
-function OrgLogo({ alt }: { alt: string }) {
-  const Icon = ORG_ICONS[alt] || BriefcaseBusinessIcon;
   return (
     <div className="flex size-8 flex-none items-center justify-center rounded-full border bg-muted shadow ring-2 ring-border md:size-10">
-      <Icon className="size-4 text-muted-foreground" aria-hidden />
+      <BriefcaseBusinessIcon
+        className="size-4 text-muted-foreground"
+        aria-hidden
+      />
     </div>
   );
 }
@@ -57,10 +57,10 @@ export default function WorkSection() {
           <AccordionTrigger className="group cursor-pointer rounded-none p-0 transition-colors hover:no-underline [&>svg]:hidden">
             <div className="flex w-full items-center justify-between gap-x-3 text-left">
               <div className="flex min-w-0 flex-1 items-center gap-x-3">
-                <OrgLogo alt={work.company} />
+                <OrgLogo alt={work.company} logoUrl={work.logoUrl} />
                 <div className="flex min-w-0 flex-1 flex-col gap-0.5">
-                  <div className="flex items-center gap-2 font-semibold leading-none">
-                    <span className="truncate">{work.company}</span>
+                  <div className="flex items-center gap-2 font-semibold leading-tight">
+                    <span>{work.company}</span>
                     <span className="relative inline-flex h-3.5 w-3.5 items-center">
                       <ChevronRight
                         className={cn(

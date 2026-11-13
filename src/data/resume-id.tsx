@@ -7,32 +7,42 @@ import { DATA } from "./resume";
  */
 
 const DESCRIPTION =
-  "Software Engineer & Creative Designer. Mahasiswa Informatika Universitas Airlangga yang membangun aplikasi web yang nyaman dipakai.";
+  "Software Engineer & Creative Designer. Mahasiswa Informatika Universitas Airlangga dengan pengalaman di desain, software engineering, AI, data, dan cybersecurity.";
 
 const SUMMARY =
-  "Saya **Vito Aditya**, Software Engineer sekaligus Creative Designer yang sedang menempuh gelar sarjana terapan di [Teknologi Informasi Universitas Airlangga](https://www.unair.ac.id) dengan IPK 3,66 dari 4,00. Saya senang bekerja di area yang menggabungkan desain dan rekayasa, mulai dari [Kulakan](https://kulakan.web.id), aplikasi open source untuk profit dan stok UMKM F&B, sampai [SiLestari](https://silestari.vercel.app), platform berbasis AI untuk melestarikan bahasa daerah di Indonesia. Di luar kode, saya adalah [sutradara film juara tingkat nasional](/#achievements), [digital marketer dan graphic designer bersertifikat BNSP](/#achievements), serta anggota aktif HIMTI Universitas Airlangga.";
+  "Saya **Vito Aditya**, Software Engineer sekaligus Creative Designer yang sedang menempuh gelar sarjana terapan di [Teknologi Informasi Universitas Airlangga](https://www.unair.ac.id) dengan IPK 3,66 dari 4,00. Saya punya pengalaman langsung di lima bidang: desain dan kreatif, software engineering, AI dan machine learning, data, serta cybersecurity. Pekerjaan yang paling saya nikmati ada di persimpangan software engineering dan desain kreatif, mulai dari [Kulakan](https://kulakan.web.id), aplikasi open source untuk profit dan stok UMKM F&B, sampai [SiLestari](https://silestari.vercel.app), platform berbasis AI untuk melestarikan bahasa daerah di Indonesia. Di luar kode, saya adalah [sutradara film juara tingkat nasional](/#achievements) dan [digital marketer serta graphic designer bersertifikat BNSP](/#achievements).";
+
+const ROLES = [
+  "Software Engineering",
+  "Desain & Kreatif",
+  "AI & Machine Learning",
+  "Data",
+  "Cybersecurity",
+];
 
 const INTEREST_DESCRIPTIONS = [
   "Sutradara film pendek juara tingkat nasional, juara pertama di Festival Sinemakom 2024.",
-  "Dokumentasi event dan karya visual yang saya asah sebagai Photography Intern di UKM Fotografi UNAIR.",
+  "Dokumentasi event dan karya visual, dari produksi kampus sampai program komunitas.",
   "Graphic & Multimedia Designer bersertifikat BNSP dengan ketertarikan pada tipografi dan motion design.",
   "Camera person intern di TV9 Nusantara, menangani produksi live dan alur kerja broadcasting.",
 ];
 
 const WORK_TITLES = [
   "Expert Staff Divisi Digital Media & Informasi",
-  "Staff Divisi Creative Media & Digitalisasi",
-  "Photography Intern",
-  "Cinematography Intern",
   "Camera Person Intern",
 ];
 
 const WORK_DESCRIPTIONS = [
   "Menjadi expert staff di Divisi Digital Media & Informasi pada himpunan mahasiswa Informatika UNAIR. Menangani publikasi, digitalisasi, dan dokumentasi untuk program unggulan seperti Biztech 2025, HIMTI Cares Vol. 3, studi banding ke UGM & PENS, upgrading anggota, serta seri kuliah tamu.",
-  "Mendukung produksi creative media dan digitalisasi untuk BEM Fakultas Vokasi, mulai dari program Netcity 3.0, koordinasi tim media community service Kampung Merdeka, sampai dokumentasi closing party Magang Merdeka.",
-  "Magang di klub fotografi UNAIR, mendokumentasikan event dan menghasilkan karya visual sambil mengasah komposisi, pencahayaan, serta kemampuan edit foto.",
-  "Belajar sinematografi dan produksi video menyeluruh di klub sinematografi UNAIR, mulai dari penyutradaraan dan operasi kamera sampai penyuntingan cerita visual format pendek.",
   "Mengoperasikan kamera broadcast profesional untuk produksi TV daerah, mendapatkan pengalaman langsung dalam produksi video live, liputan berita, dan alur kerja broadcasting selama masa SMK.",
+];
+
+const SKILL_GROUP_TITLES = [
+  "Desain & Kreatif",
+  "Software Engineering",
+  "AI & Machine Learning",
+  "Data",
+  "Cybersecurity",
 ];
 
 const EDUCATION_DEGREES = [
@@ -95,6 +105,11 @@ export const DATA_ID = {
   ...DATA,
   description: DESCRIPTION,
   summary: SUMMARY,
+  roles: ROLES,
+  skillGroups: DATA.skillGroups.map((group, i) => ({
+    ...group,
+    title: SKILL_GROUP_TITLES[i] ?? group.title,
+  })),
   interests: DATA.interests.map((item, i) => ({
     ...item,
     description: INTEREST_DESCRIPTIONS[i] ?? item.description,
