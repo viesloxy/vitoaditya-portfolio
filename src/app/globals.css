@@ -204,7 +204,7 @@
   }
 
   .prose a {
-    @apply font-medium text-foreground underline underline-offset-4 decoration-border hover:decoration-foreground transition-colors;
+    @apply text-primary underline underline-offset-4;
   }
 
   .prose strong {
