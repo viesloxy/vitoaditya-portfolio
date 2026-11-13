@@ -159,9 +159,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ========================== GITHUB ACTIVITY ========================== */}
-      <GitHubActivitySection />
-
       {/* ============================== ABOUT ============================== */}
       <section id="about">
         <div className="flex min-h-0 flex-col gap-y-4">
@@ -175,6 +172,9 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
+
+      {/* ========================== GITHUB ACTIVITY ========================== */}
+      <GitHubActivitySection />
 
       {/* ============================ EXPERIENCE ============================ */}
       <section id="experience">

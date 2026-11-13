@@ -19,10 +19,10 @@ interface ContributionsResponse {
 
 const LEVEL_CLASS = [
   "bg-muted",
-  "bg-emerald-500/20 dark:bg-emerald-400/20",
-  "bg-emerald-500/40 dark:bg-emerald-400/40",
-  "bg-emerald-500/70 dark:bg-emerald-400/70",
-  "bg-emerald-500 dark:bg-emerald-400",
+  "bg-[#bbf7d0] dark:bg-[#14532d]",
+  "bg-[#4ade80] dark:bg-[#16a34a]",
+  "bg-[#16a34a] dark:bg-[#22c55e]",
+  "bg-[#15803d] dark:bg-[#4ade80]",
 ] as const;
 
 const MONTHS = [
