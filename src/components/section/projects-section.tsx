@@ -3,9 +3,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
 import { useLang } from "@/components/language-provider";
-import { Icons } from "@/components/icons";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -37,45 +34,25 @@ export default function ProjectsSection() {
             </p>
           </div>
         </div>
-        <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
           {copy.projects.map((project, id) => (
             <BlurFade
               key={project.title}
               delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               className="h-full"
-              inView
             >
               <ProjectCard
                 href={project.href}
-                key={project.title}
                 title={project.title}
                 description={project.description}
                 dates={project.dates}
                 tags={project.technologies}
                 image={project.image}
                 links={project.links}
-                featured={id === 0}
               />
             </BlurFade>
           ))}
         </div>
-        <BlurFade delay={BLUR_FADE_DELAY * 13} inView>
-          <div className="flex justify-center">
-            <Button variant="outline" className="gap-2" asChild>
-              <Link
-                href="https://github.com/viesloxy?tab=repositories"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icons.github className="size-4" aria-hidden />
-                {t(
-                  "See all 23+ repositories on GitHub",
-                  "Lihat 23+ repository di GitHub"
-                )}
-              </Link>
-            </Button>
-          </div>
-        </BlurFade>
       </div>
     </section>
   );

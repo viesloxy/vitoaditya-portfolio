@@ -16,24 +16,28 @@ const BLUR_FADE_DELAY = 0.04;
 function AchievementCard({
   achievement,
   index,
+  total,
 }: {
   achievement: (typeof DATA.achievements)[number];
   index: number;
+  total: number;
 }) {
   const [imageError, setImageError] = useState(false);
   const featured = index === 0;
+  // Keep the grid balanced when there is an odd number of regular cards.
+  const wide = featured || (index === total - 1 && total % 2 === 0);
 
   return (
     <div
       className={cn(
         "group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-200 hover:shadow-lg hover:shadow-foreground/5",
-        featured && "sm:col-span-2 sm:flex-row"
+        wide && "sm:col-span-2 sm:flex-row"
       )}
     >
       <div
         className={cn(
           "relative shrink-0 overflow-hidden bg-muted/40",
-          featured ? "sm:w-1/2" : ""
+          wide ? "sm:w-1/2" : ""
         )}
       >
         {achievement.images[0] && !imageError ? (
@@ -44,9 +48,9 @@ function AchievementCard({
             onError={() => setImageError(true)}
             className={cn(
               "object-cover transition-transform duration-500 group-hover:scale-105",
-              featured
+              wide
                 ? "h-48 w-full sm:h-full sm:min-h-64"
-                : "h-40 w-full"
+                : "h-40 w-full object-top"
             )}
           />
         ) : (
@@ -138,15 +142,24 @@ export default function AchievementsSection() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {copy.achievements.map((achievement, index) => (
             <BlurFade
               key={achievement.title}
               delay={BLUR_FADE_DELAY * 14 + index * 0.05}
-              className={cn("h-full", index === 0 && "sm:col-span-2")}
-              inView
+              className={cn(
+                "h-full",
+                (index === 0 ||
+                  (index === copy.achievements.length - 1 &&
+                    copy.achievements.length % 2 === 0)) &&
+                  "sm:col-span-2"
+              )}
             >
-              <AchievementCard achievement={achievement} index={index} />
+              <AchievementCard
+                achievement={achievement}
+                index={index}
+                total={copy.achievements.length}
+              />
             </BlurFade>
           ))}
         </div>

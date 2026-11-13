@@ -25,7 +25,7 @@ export default function ContactSection() {
           {t("Contact", "Kontak")}
         </span>
       </div>
-      <div className="relative flex flex-col items-center gap-5 p-10 text-center">
+      <div className="relative flex flex-col items-center gap-4 p-10 text-center">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
           <WordRotate
             words={copy.languages}

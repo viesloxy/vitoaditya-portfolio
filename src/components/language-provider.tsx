@@ -30,6 +30,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const saved = window.localStorage.getItem(STORAGE_KEY);
     if (saved === "id" || saved === "en") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- hydrate the persisted language after mount to avoid a mismatch
       setLang(saved);
     }
     setMounted(true);
