@@ -16,9 +16,9 @@ export const DATA = {
   locationLink:
     "https://www.google.com/maps/place/Surabaya,+East+Java,+Indonesia",
   description:
-    "Software Engineer & Creative Designer. Informatics student at Universitas Airlangga with hands-on experience across design, software engineering, AI, data, and cybersecurity.",
+    "Software Engineer & Creative Designer. Informatics Engineering student at Universitas Airlangga with hands-on experience across design, software engineering, AI, data, and cybersecurity.",
   summary:
-    "I'm **Vito Aditya**, a Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Information Technology at Universitas Airlangga](https://www.unair.ac.id) with a 3.66/4.00 GPA. I have hands-on experience across five fields: design and creative, software engineering, AI and machine learning, data, and cybersecurity. The work I enjoy most sits where software engineering meets creative design, from [Kulakan](https://kulakan.web.id), an open-source profit and inventory manager for small F&B businesses, to [SiLestari](https://silestari.vercel.app), an AI-powered platform for preserving Indonesia's regional languages. Beyond code, I'm a [national award-winning filmmaker](/#achievements) and a [BNSP-certified digital marketer and graphic designer](/#achievements).",
+    "I'm **Vito Aditya**, a Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Informatics Engineering at Universitas Airlangga](https://www.unair.ac.id). I have hands-on experience across five fields: design and creative, software engineering, AI and machine learning, data, and cybersecurity. I'm most passionate about software engineering and creative design, and I enjoy working where the two overlap.",
   avatarUrl: "/me.jpg",
   resumeUrl:
     "https://drive.google.com/file/d/1Bdm-hVJQkhXLvfqbIjmAOvNPF-jF0q1D/view?usp=sharing",

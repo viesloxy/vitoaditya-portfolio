@@ -128,8 +128,9 @@ export default async function Image() {
                 lineHeight: 1.4,
               }}
             >
-              Informatics student at Universitas Airlangga who builds web
-              applications people actually enjoy using.
+              Informatics Engineering student at Universitas Airlangga with
+              hands-on experience across design, software engineering, AI,
+              data, and cybersecurity.
             </div>
           </div>
           <div

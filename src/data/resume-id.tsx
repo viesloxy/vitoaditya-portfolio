@@ -7,10 +7,10 @@ import { DATA } from "./resume";
  */
 
 const DESCRIPTION =
-  "Software Engineer & Creative Designer. Mahasiswa Informatika Universitas Airlangga dengan pengalaman di desain, software engineering, AI, data, dan cybersecurity.";
+  "Software Engineer & Creative Designer. Mahasiswa Teknik Informatika Universitas Airlangga dengan pengalaman di desain, software engineering, AI, data, dan cybersecurity.";
 
 const SUMMARY =
-  "Saya **Vito Aditya**, Software Engineer sekaligus Creative Designer yang sedang menempuh gelar sarjana terapan di [Teknologi Informasi Universitas Airlangga](https://www.unair.ac.id) dengan IPK 3,66 dari 4,00. Saya punya pengalaman langsung di lima bidang: desain dan kreatif, software engineering, AI dan machine learning, data, serta cybersecurity. Pekerjaan yang paling saya nikmati ada di persimpangan software engineering dan desain kreatif, mulai dari [Kulakan](https://kulakan.web.id), aplikasi open source untuk profit dan stok UMKM F&B, sampai [SiLestari](https://silestari.vercel.app), platform berbasis AI untuk melestarikan bahasa daerah di Indonesia. Di luar kode, saya adalah [sutradara film juara tingkat nasional](/#achievements) dan [digital marketer serta graphic designer bersertifikat BNSP](/#achievements).";
+  "Saya **Vito Aditya**, Software Engineer sekaligus Creative Designer yang sedang menempuh gelar sarjana terapan di [Teknik Informatika Universitas Airlangga](https://www.unair.ac.id). Saya punya pengalaman langsung di lima bidang: desain dan kreatif, software engineering, AI dan machine learning, data, serta cybersecurity. Bidang yang paling saya minati adalah software engineering dan creative design, terutama saat keduanya bertemu.";
 
 const ROLES = [
   "Software Engineering",
