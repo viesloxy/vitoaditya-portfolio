@@ -1,11 +1,8 @@
 "use client";
 
-import { Globe } from "@/components/magicui/globe";
+import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { WordRotate } from "@/components/magicui/word-rotate";
-import { Button } from "@/components/ui/button";
 import { useLang } from "@/components/language-provider";
-import { Icons } from "@/components/icons";
-import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 
 export default function ContactSection() {
@@ -13,11 +10,17 @@ export default function ContactSection() {
 
   return (
     <div className="relative rounded-xl border">
-      {/* Globe background (clipped inside its own wrapper) */}
-      <div className="mask-fade-b pointer-events-none absolute inset-0 overflow-hidden rounded-xl">
-        <div className="flex h-full items-center justify-center opacity-25 dark:opacity-60">
-          <Globe size={560} />
-        </div>
+      {/* Flickering grid background (matching the original template) */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-1/2 overflow-hidden rounded-t-xl">
+        <FlickeringGrid
+          className="h-full w-full"
+          squareSize={2}
+          gridGap={2}
+          style={{
+            maskImage: "linear-gradient(to bottom, black, transparent)",
+            WebkitMaskImage: "linear-gradient(to bottom, black, transparent)",
+          }}
+        />
       </div>
       {/* Section label sitting on the border, like the template */}
       <div className="absolute -top-4 left-1/2 z-10 -translate-x-1/2 rounded-xl border bg-primary px-4 py-1">
@@ -39,36 +42,29 @@ export default function ContactSection() {
             "Entah itu proyek, magang, atau sekadar ngobrol soal desain dan engineering, inbox saya selalu terbuka. Saya akan secepatnya membalas."
           )}
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <Button className="group gap-2" asChild>
-            <Link href={`mailto:${copy.contact.email}`}>
-              {t("Send me an email", "Kirim email")}
-              <ArrowRightIcon
-                className="size-4 transition-transform duration-200 group-hover:translate-x-0.5"
-                aria-hidden
-              />
-            </Link>
-          </Button>
-          <Button variant="outline" className="gap-2" asChild>
-            <Link
-              href={copy.contact.social.GitHub.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icons.github className="size-4" aria-hidden />
-              GitHub
-            </Link>
-          </Button>
-          <Button variant="outline" className="gap-2" asChild>
-            <Link
-              href={copy.contact.social.LinkedIn.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icons.linkedin className="size-4" aria-hidden />
-              LinkedIn
-            </Link>
-          </Button>
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm">
+          <Link
+            href={`mailto:${copy.contact.email}`}
+            className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+          >
+            {t("Send me an email", "Kirim email")}
+          </Link>
+          <Link
+            href={copy.contact.social.GitHub.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+          >
+            GitHub
+          </Link>
+          <Link
+            href={copy.contact.social.LinkedIn.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+          >
+            LinkedIn
+          </Link>
         </div>
         <p className="text-xs text-muted-foreground">
           {copy.location} · GMT+7 ·{" "}

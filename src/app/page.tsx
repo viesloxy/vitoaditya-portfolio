@@ -8,7 +8,6 @@ import { WordRotate } from "@/components/magicui/word-rotate";
 import { AnimatedShinyText } from "@/components/magicui/animated-shiny-text";
 import { TechIcon } from "@/components/tech-icon";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useLang } from "@/components/language-provider";
 import Markdown from "react-markdown";
@@ -313,28 +312,6 @@ export default function Page() {
           <ContactSection />
         </BlurFade>
       </section>
-
-      {/* ============================== FOOTER ============================== */}
-      <BlurFade delay={BLUR_FADE_DELAY * 20}>
-        <footer className="flex flex-col items-center justify-between gap-3 border-t pt-6 text-xs text-muted-foreground sm:flex-row">
-          <p>
-            © {new Date().getFullYear()} {copy.name}.{" "}
-            {t("All rights reserved.", "Seluruh hak cipta dilindungi.")}
-          </p>
-          <div className="flex items-center gap-1">
-            {t("Built with", "Dibangun dengan")}{" "}
-            <Badge variant="outline" className="h-5 px-1.5 text-[10px] font-medium">
-              Next.js
-            </Badge>
-            <Badge variant="outline" className="h-5 px-1.5 text-[10px] font-medium">
-              Tailwind CSS
-            </Badge>
-            <Badge variant="outline" className="h-5 px-1.5 text-[10px] font-medium">
-              Magic UI
-            </Badge>
-          </div>
-        </footer>
-      </BlurFade>
     </main>
   );
 }

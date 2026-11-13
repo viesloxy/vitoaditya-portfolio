@@ -503,12 +503,5 @@ export const DATA = {
     "Mari Bekerja Sama",
     "Let's Work Together",
     "一緒に働こう",
-    "Trabajemos Juntos",
-    "Travaillons Ensemble",
-    "Zusammenarbeiten",
-    "함께 하자",
-    "一起工作吧",
-    "Lavoriamo Insieme",
-    "Vamos Trabalhar",
   ],
 } as const;
