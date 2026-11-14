@@ -3,8 +3,9 @@
 
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
+import { MoreCard } from "@/components/more-card";
 import { useLang } from "@/components/language-provider";
-import { ArrowLeftIcon, ExternalLinkIcon } from "lucide-react";
+import { ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -77,23 +78,14 @@ export default function ProjectsPage() {
 
       <section>
         <BlurFade delay={BLUR_FADE_DELAY * 12}>
-          <div className="rounded-xl border bg-card p-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              {t(
-                "More repositories and source code can be found on my GitHub profile.",
-                "Lebih banyak repositori dan kode sumber dapat ditemukan di profil GitHub saya."
-              )}
-            </p>
-            <Link
-              href={copy.contact.social.GitHub.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-            >
-              {t("View on GitHub", "Lihat di GitHub")}
-              <ExternalLinkIcon className="size-3.5" aria-hidden />
-            </Link>
-          </div>
+          <MoreCard
+            text={t(
+              "More repositories and source code can be found on my GitHub profile.",
+              "Lebih banyak repositori dan kode sumber dapat ditemukan di profil GitHub saya."
+            )}
+            linkLabel={t("View on GitHub", "Lihat di GitHub")}
+            href={copy.contact.social.GitHub.url}
+          />
         </BlurFade>
       </section>
     </main>

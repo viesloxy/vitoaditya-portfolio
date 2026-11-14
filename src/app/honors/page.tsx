@@ -2,12 +2,9 @@
 "use client";
 
 import BlurFade from "@/components/magicui/blur-fade";
+import { MoreCard } from "@/components/more-card";
 import { useLang } from "@/components/language-provider";
-import {
-  ArrowLeftIcon,
-  ArrowUpRight,
-  ExternalLinkIcon,
-} from "lucide-react";
+import { ArrowLeftIcon, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import Markdown from "react-markdown";
@@ -80,23 +77,14 @@ export default function HonorsPage() {
 
       <section>
         <BlurFade delay={BLUR_FADE_DELAY * 8}>
-          <div className="rounded-xl border bg-card p-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              {t(
-                "More honors and recognitions can be found on my LinkedIn profile.",
-                "Lebih banyak penghargaan dan pengakuan dapat dilihat di profil LinkedIn saya."
-              )}
-            </p>
-            <Link
-              href={copy.contact.social.LinkedIn.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-            >
-              {t("View on LinkedIn", "Lihat di LinkedIn")}
-              <ExternalLinkIcon className="size-3.5" aria-hidden />
-            </Link>
-          </div>
+          <MoreCard
+            text={t(
+              "More honors and recognitions can be found on my LinkedIn profile.",
+              "Lebih banyak penghargaan dan pengakuan dapat dilihat di profil LinkedIn saya."
+            )}
+            linkLabel={t("View on LinkedIn", "Lihat di LinkedIn")}
+            href={copy.contact.social.LinkedIn.url}
+          />
         </BlurFade>
       </section>
     </main>

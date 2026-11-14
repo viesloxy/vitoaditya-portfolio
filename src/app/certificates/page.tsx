@@ -2,10 +2,12 @@
 "use client";
 
 import BlurFade from "@/components/magicui/blur-fade";
+import { MoreCard } from "@/components/more-card";
 import { useLang } from "@/components/language-provider";
-import { ArrowLeftIcon, ArrowUpRight, ExternalLinkIcon } from "lucide-react";
+import { ArrowLeftIcon, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -57,11 +59,12 @@ export default function CertificatesPage() {
       </section>
 
       <section>
-        <div className="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2">
+        <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
           {copy.detailedCertificates.map((cert, id) => (
             <BlurFade
               key={`${cert.title}-${id}`}
               delay={BLUR_FADE_DELAY * 5 + id * 0.04}
+              className="h-full"
             >
               <Card
                 title={cert.title}
@@ -81,23 +84,14 @@ export default function CertificatesPage() {
 
       <section>
         <BlurFade delay={BLUR_FADE_DELAY * 12}>
-          <div className="rounded-xl border bg-card p-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              {t(
-                "More credentials and certificates can be found on my LinkedIn profile.",
-                "Kredensial dan sertifikat lainnya dapat dilihat di profil LinkedIn saya."
-              )}
-            </p>
-            <Link
-              href={copy.contact.social.LinkedIn.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
-            >
-              {t("View on LinkedIn", "Lihat di LinkedIn")}
-              <ExternalLinkIcon className="size-3.5" aria-hidden />
-            </Link>
-          </div>
+          <MoreCard
+            text={t(
+              "More credentials and certificates can be found on my LinkedIn profile.",
+              "Kredensial dan sertifikat lainnya dapat dilihat di profil LinkedIn saya."
+            )}
+            linkLabel={t("View on LinkedIn", "Lihat di LinkedIn")}
+            href={copy.contact.social.LinkedIn.url}
+          />
         </BlurFade>
       </section>
     </main>
@@ -162,8 +156,8 @@ function Card({
           </Link>
         </div>
         {description && (
-          <div className="text-xs leading-relaxed text-muted-foreground">
-            {description}
+          <div className="prose max-w-full flex-1 text-pretty font-sans text-xs leading-relaxed text-muted-foreground dark:prose-invert">
+            <Markdown>{description}</Markdown>
           </div>
         )}
       </div>
