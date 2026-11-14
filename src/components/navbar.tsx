@@ -12,9 +12,16 @@ import { useLang } from "@/components/language-provider";
 import { useEffect, useState } from "react";
 import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { useModeAnimation } from "react-theme-switch-animation";
 
 export default function Navbar() {
   const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+
+  const { ref, toggleSwitchTheme } = useModeAnimation({
+    isDarkMode: isDark,
+    onDarkModeChange: (dark) => setTheme(dark ? "dark" : "light"),
+  });
   const { lang, setLang, copy, t } = useLang();
   const [mounted, setMounted] = useState(false);
 
@@ -141,10 +148,9 @@ export default function Navbar() {
           <Tooltip>
             <TooltipTrigger asChild>
               <button
+                ref={ref}
                 type="button"
-                onClick={() =>
-                  setTheme(resolvedTheme === "dark" ? "light" : "dark")
-                }
+                onClick={toggleSwitchTheme}
                 aria-label={
                   mounted && resolvedTheme === "dark"
                     ? t("Switch to light mode", "Beralih ke mode terang")

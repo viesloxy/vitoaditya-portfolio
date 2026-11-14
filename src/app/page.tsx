@@ -43,7 +43,7 @@ export default function Page() {
               <BlurFadeText
                 as="h1"
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
+                className="text-2xl font-semibold tracking-tighter sm:text-3xl lg:text-4xl"
                 yOffset={8}
                 text={t(
                   `Hi, I'm ${copy.name}`,
