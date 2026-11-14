@@ -145,7 +145,7 @@ export const DATA = {
     { href: "/#about", icon: UserIcon, label: "About" },
     { href: "/#experience", icon: BriefcaseBusinessIcon, label: "Experience" },
     { href: "/#projects", icon: FolderGit2Icon, label: "Projects" },
-    { href: "/#achievements", icon: GraduationCapIcon, label: "Achievements" },
+    { href: "/#honors", icon: GraduationCapIcon, label: "Honors" },
     { href: "/#contact", icon: MailIcon, label: "Contact" },
   ],
 
@@ -436,7 +436,7 @@ export const DATA = {
     },
   ],
 
-  achievements: [
+  honors: [
     {
       title: "1st Place, National Short Film Competition",
       dates: "Jul 2024",
@@ -445,7 +445,6 @@ export const DATA = {
         "Achieved 1st place in the national short film competition at FESTIVAL SINEMAKOM, representing SMKN 1 Mojokerto. Directing, cinematography, and editing on a competitive national stage.",
       images: ["/images/award_sinemakom.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/honors/",
-      win: "1st Place Winner",
     },
     {
       title: "3rd Best Family Short Film",
@@ -455,8 +454,19 @@ export const DATA = {
         "Won 3rd place for Best Family Short Film at UNHASY Festival Cinema, an inter-campus film festival, and my second national award in a year of filmmaking.",
       images: ["/images/award_unhasy.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/honors/",
-      win: "3rd Place Winner",
     },
+    {
+      title: "Finalist, Software Development",
+      dates: "Sep 2026",
+      place: "IT CONVERT 2026",
+      description:
+        "Finalist in the Software Development competition at IT CONVERT 2026, demonstrating problem-solving and software engineering skills on a competitive stage.",
+      images: ["/images/honor-itconvert.png"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/honors/",
+    },
+  ],
+
+  certifications: [
     {
       title: "BNSP Certified Digital Marketer",
       dates: "2024",
@@ -465,7 +475,6 @@ export const DATA = {
         "Nationally certified by Indonesia's Professional Certification Authority (BNSP) as a Digital Marketer, covering digital strategy, campaign management, and analytics.",
       images: ["/images/cert_bnsp_dm.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
-      win: "Competency Certified",
     },
     {
       title: "BNSP Certified Graphic & Multimedia Designer",
@@ -475,7 +484,6 @@ export const DATA = {
         "Nationally certified by BNSP as a Graphic & Multimedia Designer, validating professional competence in visual design and multimedia production.",
       images: ["/images/cert_bnsp_gmd.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
-      win: "Competency Certified",
     },
     {
       title: "Audio & Video Processing Certification",
@@ -485,17 +493,58 @@ export const DATA = {
         "Professional certification in audio and video processing techniques, the foundation of my filmmaking and motion design work.",
       images: ["/images/cert_audiovideo.jpg"],
       link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
-      win: "Certified",
+    },
+  ],
+
+  detailedCertificates: [
+    {
+      title: "UI/UX Design Intensive Camp",
+      issuer: "Digital Talent Scholarship",
+      date: "2025",
+      image: "/images/course_1.jpg",
+      credential: "",
     },
     {
-      title: "Courses & Bootcamps: 11+ Certificates",
-      dates: "2023 - 2026",
-      place: "Dicoding · Digital Talent Scholarship · Others",
-      description:
-        "Continuous skill development: UI/UX Design Intensive Camp & Junior Web Developer from Digital Talent Scholarship, plus Dicoding courses in AI, Data Science, SQL, Java, and Prompt Engineering. Full list on LinkedIn.",
-      images: ["/images/course_1.jpg", "/images/course_2.jpg", "/images/course_3.jpg"],
-      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
-      win: "11+ Certificates",
+      title: "Junior Web Developer",
+      issuer: "Digital Talent Scholarship",
+      date: "2024",
+      image: "/images/course_2.jpg",
+      credential: "",
+    },
+    {
+      title: "AI for Beginners",
+      issuer: "Dicoding",
+      date: "2025",
+      image: "/images/course_3.jpg",
+      credential: "",
+    },
+    {
+      title: "Data Science Fundamentals",
+      issuer: "Dicoding",
+      date: "2025",
+      image: "/images/course_1.jpg",
+      credential: "",
+    },
+    {
+      title: "SQL Query Mastery",
+      issuer: "Dicoding",
+      date: "2024",
+      image: "/images/course_2.jpg",
+      credential: "",
+    },
+    {
+      title: "Java Programming",
+      issuer: "Dicoding",
+      date: "2024",
+      image: "/images/course_3.jpg",
+      credential: "",
+    },
+    {
+      title: "Prompt Engineering",
+      issuer: "Dicoding",
+      date: "2026",
+      image: "/images/course_1.jpg",
+      credential: "",
     },
   ],
 

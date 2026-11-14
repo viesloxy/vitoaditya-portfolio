@@ -63,31 +63,28 @@ const PROJECT_DESCRIPTIONS = [
   "Platform EdTerpadu (Creative, Technology, and Business) yang menghubungkan perkuliahan dengan praktik industri, lengkap dengan desain UI menyeluruh dan landing page responsif.",
 ];
 
-const ACHIEVEMENT_TITLES = [
+const HONOR_TITLES = [
   "Juara 1, Kompetisi Film Pendek Tingkat Nasional",
   "Film Pendek Keluarga Terbaik Juara 3",
+  "Finalis, Software Development",
+];
+
+const HONOR_DESCRIPTIONS = [
+  "Juara 1 dalam kompetisi film pendek tingkat nasional FESTIVAL SINEMAKOM, mewakili SMKN 1 Mojokerto. Menjalankan penyutradaraan, sinematografi, dan penyuntingan di panggung nasional yang kompetitif.",
+  "Meraih juara 3 Film Pendek Keluarga di UNHASY Festival Cinema, festival film antar kampus, dan menjadi penghargaan nasional kedua saya dalam setahun berkarya.",
+  "Finalis di kompetisi Software Development pada IT CONVERT 2026, menunjukkan kemampuan problem-solving dan software engineering di panggung kompetitif.",
+];
+
+const CERT_TITLES = [
   "Digital Marketer Bersertifikat BNSP",
   "Graphic & Multimedia Designer Bersertifikat BNSP",
   "Sertifikasi Pengolahan Audio & Video",
-  "Kursus & Bootcamp: 11+ Sertifikat",
 ];
 
-const ACHIEVEMENT_DESCRIPTIONS = [
-  "Juara 1 dalam kompetisi film pendek tingkat nasional FESTIVAL SINEMAKOM, mewakili SMKN 1 Mojokerto. Menjalankan penyutradaraan, sinematografi, dan penyuntingan di panggung nasional yang kompetitif.",
-  "Meraih juara 3 Film Pendek Keluarga di UNHASY Festival Cinema, festival film antar kampus, dan menjadi penghargaan nasional kedua saya dalam setahun berkarya.",
+const CERT_DESCRIPTIONS = [
   "Bersertifikat nasional oleh Badan Nasional Sertifikasi Profesi (BNSP) sebagai Digital Marketer, mencakup strategi digital, pengelolaan kampanye, dan analitik.",
   "Bersertifikat nasional oleh BNSP sebagai Graphic & Multimedia Designer, yang memvalidasi kompetensi profesional dalam desain visual dan produksi multimedia.",
   "Sertifikasi profesional dalam teknik pengolahan audio dan video, yang menjadi dasar pekerjaan syuting dan motion design saya.",
-  "Pengembangan keterampilan berkelanjutan: UI/UX Design Intensive Camp & Junior Web Developer dari Digital Talent Scholarship, ditambah kursus Dicoding di AI, Data Science, SQL, Java, dan Prompt Engineering. Daftar lengkap ada di LinkedIn.",
-];
-
-const ACHIEVEMENT_WINS = [
-  "Juara 1",
-  "Juara 3",
-  "Sertifikasi Kompetensi",
-  "Sertifikasi Kompetensi",
-  "Bersertifikat",
-  "11+ Sertifikat",
 ];
 
 const NAVBAR_LABELS = [
@@ -95,7 +92,7 @@ const NAVBAR_LABELS = [
   "Tentang",
   "Pengalaman",
   "Proyek",
-  "Prestasi",
+  "Penghargaan",
   "Kontak",
 ];
 
@@ -129,11 +126,15 @@ export const DATA_ID = {
     ...item,
     description: PROJECT_DESCRIPTIONS[i] ?? item.description,
   })),
-  achievements: DATA.achievements.map((item, i) => ({
+  honors: DATA.honors.map((item, i) => ({
     ...item,
-    title: ACHIEVEMENT_TITLES[i] ?? item.title,
-    description: ACHIEVEMENT_DESCRIPTIONS[i] ?? item.description,
-    win: ACHIEVEMENT_WINS[i] ?? item.win,
+    title: HONOR_TITLES[i] ?? item.title,
+    description: HONOR_DESCRIPTIONS[i] ?? item.description,
+  })),
+  certifications: DATA.certifications.map((item, i) => ({
+    ...item,
+    title: CERT_TITLES[i] ?? item.title,
+    description: CERT_DESCRIPTIONS[i] ?? item.description,
   })),
   navbar: DATA.navbar.map((item, i) => ({
     ...item,

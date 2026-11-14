@@ -2,12 +2,16 @@
 
 import BlurFade from "@/components/magicui/blur-fade";
 import { ProjectCard } from "@/components/project-card";
+import { Button } from "@/components/ui/button";
 import { useLang } from "@/components/language-provider";
+import { ArrowRightIcon, ExternalLinkIcon } from "lucide-react";
+import Link from "next/link";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function ProjectsSection() {
   const { copy, t } = useLang();
+  const maxPreview = 4;
 
   return (
     <section id="projects">
@@ -35,7 +39,7 @@ export default function ProjectsSection() {
           </div>
         </div>
         <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
-          {copy.projects.map((project, id) => (
+          {copy.projects.slice(0, maxPreview).map((project, id) => (
             <BlurFade
               key={project.title}
               delay={BLUR_FADE_DELAY * 12 + id * 0.05}
@@ -53,6 +57,37 @@ export default function ProjectsSection() {
             </BlurFade>
           ))}
         </div>
+        <div className="flex justify-center pt-2">
+          <Button asChild variant="outline" className="gap-2">
+            <Link
+              href={copy.contact.social.GitHub.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("View all projects", "Lihat semua proyek")}
+              <ArrowRightIcon className="size-4" aria-hidden />
+            </Link>
+          </Button>
+        </div>
+        <BlurFade delay={BLUR_FADE_DELAY * 13}>
+          <div className="rounded-xl border bg-card p-6 text-center">
+            <p className="text-sm text-muted-foreground">
+              {t(
+                "More repositories and source code can be found on my GitHub profile.",
+                "Lebih banyak repositori dan kode sumber dapat ditemukan di profil GitHub saya."
+              )}
+            </p>
+            <Link
+              href={copy.contact.social.GitHub.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-foreground underline underline-offset-4 transition-colors hover:text-primary"
+            >
+              {t("View on GitHub", "Lihat di GitHub")}
+              <ExternalLinkIcon className="size-3.5" aria-hidden />
+            </Link>
+          </div>
+        </BlurFade>
       </div>
     </section>
   );

@@ -12,7 +12,8 @@ import { Button } from "@/components/ui/button";
 import { useLang } from "@/components/language-provider";
 import Markdown from "react-markdown";
 import ContactSection from "@/components/section/contact-section";
-import AchievementsSection from "@/components/section/achievements-section";
+import HonorsSection from "@/components/section/honors-section";
+import CertificationsSection from "@/components/section/certifications-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
 import {
@@ -301,14 +302,19 @@ export default function Page() {
         <ProjectsSection />
       </BlurFade>
 
-      {/* ============================ ACHIEVEMENTS ============================ */}
+      {/* ========================== HONORS & AWARDS ========================== */}
       <BlurFade delay={BLUR_FADE_DELAY * 18}>
-        <AchievementsSection />
+        <HonorsSection />
+      </BlurFade>
+
+      {/* ====================== LICENSES & CERTIFICATIONS ====================== */}
+      <BlurFade delay={BLUR_FADE_DELAY * 19}>
+        <CertificationsSection />
       </BlurFade>
 
       {/* ============================== CONTACT ============================== */}
       <section id="contact">
-        <BlurFade delay={BLUR_FADE_DELAY * 19}>
+        <BlurFade delay={BLUR_FADE_DELAY * 20}>
           <ContactSection />
         </BlurFade>
       </section>

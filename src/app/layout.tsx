@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${DATA.name}`,
   },
   description: DATA.description,
+  icons: { icon: "/me.jpg", shortcut: "/me.jpg", apple: "/me.jpg" },
   keywords: [
     "Vito Aditya",
     "Software Engineer",
