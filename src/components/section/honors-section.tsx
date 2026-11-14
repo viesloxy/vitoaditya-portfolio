@@ -59,11 +59,7 @@ export default function HonorsSection() {
         </div>
         <div className="flex justify-center pt-2">
           <Button asChild variant="outline" className="gap-2">
-            <Link
-              href={copy.contact.social.LinkedIn.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/honors">
               {t("View all honors", "Lihat semua penghargaan")}
               <ArrowRightIcon className="size-4" aria-hidden />
             </Link>
