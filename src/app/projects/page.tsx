@@ -13,6 +13,10 @@ const BLUR_FADE_DELAY = 0.04;
 export default function ProjectsPage() {
   const { copy, t } = useLang();
 
+  const projects = copy.projects.filter(
+    (project) => project.showInProjectsPage
+  );
+
   return (
     <main className="flex min-h-dvh flex-col gap-10">
       <section>
@@ -56,7 +60,7 @@ export default function ProjectsPage() {
 
       <section>
         <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
-          {copy.projects.map((project, id) => (
+          {projects.map((project, id) => (
             <BlurFade
               key={project.title}
               delay={BLUR_FADE_DELAY * 4 + id * 0.05}

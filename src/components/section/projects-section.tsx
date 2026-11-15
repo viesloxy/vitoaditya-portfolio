@@ -13,6 +13,10 @@ export default function ProjectsSection() {
   const { copy, t } = useLang();
   const maxPreview = 4;
 
+  const projects = copy.projects.filter(
+    (project) => project.showInProjectsPage
+  );
+
   return (
     <section id="projects">
       <div className="flex min-h-0 flex-col gap-y-8">
@@ -39,7 +43,7 @@ export default function ProjectsSection() {
           </div>
         </div>
         <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
-          {copy.projects.slice(0, maxPreview).map((project, id) => (
+          {projects.slice(0, maxPreview).map((project, id) => (
             <BlurFade
               key={project.title}
               delay={BLUR_FADE_DELAY * 12 + id * 0.05}

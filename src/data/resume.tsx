@@ -238,6 +238,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/kulakan",
       dates: "Nov 2026",
       active: true,
+      showInProjectsPage: true,
       description:
         "Open-source, self-hosted profit & inventory manager built for small F&B businesses (UMKM). From recipes to stock via BOM, automatic HPP costing (WAC), per-menu profit tracking, and a cash-aware shopping planner.",
       technologies: [
@@ -266,6 +267,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/silestari",
       dates: "Jul 2026",
       active: true,
+      showInProjectsPage: true,
       description:
         "AI-powered collaborative platform for preserving Indonesia's regional vocabulary. Built to help communities document, explore, and revive endangered local words together.",
       technologies: ["Next.js", "TypeScript", "React", "AI"],
@@ -288,6 +290,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/srikana-go",
       dates: "Jun 2026",
       active: true,
+      showInProjectsPage: true,
       description:
         "Integrated information system prototype for SWK Srikana Food Walk UNAIR, a React 19 + Vite frontend implementing 11 web-framework modules including SSE, NFC, Geolocation, QR, and a payment gateway.",
       technologies: ["React", "Vite", "SSE", "NFC", "Geolocation", "QR"],
@@ -310,6 +313,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/kantongek",
       dates: "Apr 2026",
       active: true,
+      showInProjectsPage: true,
       description:
         "A personal finance manager for Indonesian Gen-Z. Track expenses, set budgets, and reach savings goals in a playful, readable interface.",
       technologies: ["Next.js", "TypeScript", "TailwindCSS"],
@@ -332,6 +336,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/e-ticketing-helpdesk-mobile-app",
       dates: "Apr 2026",
       active: false,
+      showInProjectsPage: false,
       description:
         "A Flutter-based mobile application for managing helpdesk ticketing systems, from ticket creation and assignment through resolution tracking. Built for the Mobile Application Programming course.",
       technologies: ["Flutter", "Dart"],
@@ -349,6 +354,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/livercheck-klasifikasi-liver",
       dates: "Oct 2026",
       active: false,
+      showInProjectsPage: false,
       description:
         "Liver disease classification app based on the Indian Liver Patient Dataset using SVM with SMOTE resampling, wrapped in an interactive Streamlit interface.",
       technologies: ["Python", "Streamlit", "scikit-learn", "SMOTE"],
@@ -366,6 +372,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/sistem-manajemen-rshp-pwbf",
       dates: "Oct 2025",
       active: false,
+      showInProjectsPage: true,
       description:
         "Web management application for the Educational Animal Hospital of Universitas Airlangga, covering the complete workflows of receptionists, nurses, doctors, and pet owners. Built with Laravel 11.",
       technologies: ["Laravel", "PHP", "MySQL", "Blade"],
@@ -383,6 +390,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/sistem-manajemen-depot-pbd",
       dates: "Dec 2025",
       active: false,
+      showInProjectsPage: false,
       description:
         "Depot management system built with Laravel 12 and MySQL to manage master data, procurement, receiving, sales, and stock cards for a food-depot business.",
       technologies: ["Laravel", "PHP", "MySQL"],
@@ -400,6 +408,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/pemograman-backend-lanjut",
       dates: "Aug 2026",
       active: true,
+      showInProjectsPage: false,
       description:
         "Coursework and modules for Advanced Backend Programming at Universitas Airlangga. REST APIs with Go/Fiber backed by PostgreSQL, MongoDB, and Redis, complete with testing, Swagger docs, and Docker.",
       technologies: ["Go", "Fiber", "PostgreSQL", "MongoDB", "Redis", "Docker", "Swagger"],
@@ -417,6 +426,7 @@ export const DATA = {
       href: "https://github.com/viesloxy/cretechin-ui-design",
       dates: "May 2026",
       active: true,
+      showInProjectsPage: true,
       description:
         "An integrated EdTech platform (Creative, Technology, and Business) that connects academic coursework with industry practice, including a complete UI design and a responsive landing page.",
       technologies: ["Next.js", "TypeScript", "TailwindCSS", "UI/UX"],
@@ -438,6 +448,15 @@ export const DATA = {
 
   honors: [
     {
+      title: "Finalist, Software Development",
+      dates: "Sep 2026",
+      place: "IT CONVERT 2026",
+      description:
+        "Finalist in the Software Development competition at IT CONVERT 2026, demonstrating problem-solving and software engineering skills on a competitive stage.",
+      images: ["/images/honor-itconvert.png"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/honors/",
+    },
+    {
       title: "1st Place, National Short Film Competition",
       dates: "Jul 2024",
       place: "Festival Sinemakom",
@@ -451,17 +470,8 @@ export const DATA = {
       dates: "May 2024",
       place: "UNHASY Festival Cinema",
       description:
-        "Won 3rd place for Best Family Short Film at UNHASY Festival Cinema, an inter-campus film festival, and my second national award in a year of filmmaking.",
+        "Won 3rd place for Best Family Short Film at UNHASY Festival Cinema, an inter-campus film festival, while I was still studying at SMKN 1 Mojokerto. My second national film award during my vocational high school years.",
       images: ["/images/award_unhasy.jpg"],
-      link: "https://www.linkedin.com/in/vitoaditya/details/honors/",
-    },
-    {
-      title: "Finalist, Software Development",
-      dates: "Sep 2026",
-      place: "IT CONVERT 2026",
-      description:
-        "Finalist in the Software Development competition at IT CONVERT 2026, demonstrating problem-solving and software engineering skills on a competitive stage.",
-      images: ["/images/honor-itconvert.png"],
       link: "https://www.linkedin.com/in/vitoaditya/details/honors/",
     },
   ],
@@ -499,52 +509,66 @@ export const DATA = {
   detailedCertificates: [
     {
       title: "UI/UX Design Intensive Camp",
-      issuer: "Digital Talent Scholarship",
-      date: "2025",
-      image: "/images/course_1.jpg",
-      credential: "",
+      dates: "2025",
+      place: "Digital Talent Scholarship",
+      description:
+        "Intensive bootcamp covering user research, wireframing, prototyping, and design systems for real-world product work.",
+      images: ["/images/course_1.jpg"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
     },
     {
       title: "Junior Web Developer",
-      issuer: "Digital Talent Scholarship",
-      date: "2024",
-      image: "/images/course_2.jpg",
-      credential: "",
+      dates: "2024",
+      place: "Digital Talent Scholarship",
+      description:
+        "Foundational web development program covering HTML, CSS, JavaScript, and building responsive front-end interfaces.",
+      images: ["/images/course_2.jpg"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
     },
     {
       title: "AI for Beginners",
-      issuer: "Dicoding",
-      date: "2025",
-      image: "/images/course_3.jpg",
-      credential: "",
+      dates: "2025",
+      place: "Dicoding",
+      description:
+        "Entry-level introduction to artificial intelligence, machine learning fundamentals, and hands-on model building.",
+      images: ["/images/course_3.jpg"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
     },
     {
       title: "Data Science Fundamentals",
-      issuer: "Dicoding",
-      date: "2025",
-      image: "/images/course_1.jpg",
-      credential: "",
+      dates: "2025",
+      place: "Dicoding",
+      description:
+        "Core data science workflow covering data cleaning, exploration, visualization, and introductory analysis.",
+      images: ["/images/course_1.jpg"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
     },
     {
       title: "SQL Query Mastery",
-      issuer: "Dicoding",
-      date: "2024",
-      image: "/images/course_2.jpg",
-      credential: "",
+      dates: "2024",
+      place: "Dicoding",
+      description:
+        "Practical SQL training covering relational concepts, joins, aggregation, and query optimization.",
+      images: ["/images/course_2.jpg"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
     },
     {
       title: "Java Programming",
-      issuer: "Dicoding",
-      date: "2024",
-      image: "/images/course_3.jpg",
-      credential: "",
+      dates: "2024",
+      place: "Dicoding",
+      description:
+        "Programming fundamentals in Java covering OOP, data structures, collections, and basic application building.",
+      images: ["/images/course_3.jpg"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
     },
     {
       title: "Prompt Engineering",
-      issuer: "Dicoding",
-      date: "2026",
-      image: "/images/course_1.jpg",
-      credential: "",
+      dates: "2026",
+      place: "Dicoding",
+      description:
+        "Practical course on writing, refining, and evaluating prompts for large language models to get reliable, production-ready outputs.",
+      images: ["/images/course_1.jpg"],
+      link: "https://www.linkedin.com/in/vitoaditya/details/certifications/",
     },
   ],
 

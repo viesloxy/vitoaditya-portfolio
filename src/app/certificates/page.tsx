@@ -14,6 +14,11 @@ const BLUR_FADE_DELAY = 0.04;
 export default function CertificatesPage() {
   const { copy, t } = useLang();
 
+  const allCertificates = [
+    ...copy.certifications,
+    ...copy.detailedCertificates,
+  ];
+
   return (
     <main className="flex min-h-dvh flex-col gap-10">
       <section>
@@ -60,7 +65,7 @@ export default function CertificatesPage() {
 
       <section>
         <div className="mx-auto grid max-w-[800px] auto-rows-fr grid-cols-1 gap-3 sm:grid-cols-2">
-          {copy.detailedCertificates.map((cert, id) => (
+          {allCertificates.map((cert, id) => (
             <BlurFade
               key={`${cert.title}-${id}`}
               delay={BLUR_FADE_DELAY * 5 + id * 0.04}
@@ -68,14 +73,10 @@ export default function CertificatesPage() {
             >
               <Card
                 title={cert.title}
-                subtitle={`${cert.issuer} · ${cert.date}`}
-                description={cert.credential}
-                image={cert.image}
-                link={
-                  cert.credential
-                    ? `https://www.linkedin.com/in/vitoaditya/details/certifications/`
-                    : "#"
-                }
+                subtitle={`${cert.place} · ${cert.dates}`}
+                description={cert.description}
+                image={cert.images[0]}
+                link={cert.link}
               />
             </BlurFade>
           ))}

@@ -64,15 +64,15 @@ const PROJECT_DESCRIPTIONS = [
 ];
 
 const HONOR_TITLES = [
+  "Finalis, Software Development",
   "Juara 1, Kompetisi Film Pendek Tingkat Nasional",
   "Film Pendek Keluarga Terbaik Juara 3",
-  "Finalis, Software Development",
 ];
 
 const HONOR_DESCRIPTIONS = [
-  "Juara 1 dalam kompetisi film pendek tingkat nasional FESTIVAL SINEMAKOM, mewakili SMKN 1 Mojokerto. Menjalankan penyutradaraan, sinematografi, dan penyuntingan di panggung nasional yang kompetitif.",
-  "Meraih juara 3 Film Pendek Keluarga di UNHASY Festival Cinema, festival film antar kampus, dan menjadi penghargaan nasional kedua saya dalam setahun berkarya.",
   "Finalis di kompetisi Software Development pada IT CONVERT 2026, menunjukkan kemampuan problem-solving dan software engineering di panggung kompetitif.",
+  "Juara 1 dalam kompetisi film pendek tingkat nasional FESTIVAL SINEMAKOM, mewakili SMKN 1 Mojokerto. Menjalankan penyutradaraan, sinematografi, dan penyuntingan di panggung nasional yang kompetitif.",
+  "Meraih juara 3 Film Pendek Keluarga Terbaik di UNHASY Festival Cinema saat masih bersekolah di SMKN 1 Mojokerto, sebagai penghargaan film nasional yang diraih selama masa SMK.",
 ];
 
 const CERT_TITLES = [
