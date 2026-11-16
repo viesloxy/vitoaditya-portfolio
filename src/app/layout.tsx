@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar";
 import { LanguageProvider } from "@/components/language-provider";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import { ThemeProvider } from "@/components/theme-provider";
 import { FlickeringGrid } from "@/components/magicui/flickering-grid";
 import { ScrollProgress } from "@/components/magicui/scroll-progress";
@@ -8,6 +9,7 @@ import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const geist = Geist({
@@ -69,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body
         className={cn(
           "relative min-h-screen bg-background font-sans antialiased",
@@ -85,24 +87,26 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <TooltipProvider delayDuration={0}>
-            <ScrollProgress />
-            <div className="absolute inset-0 top-0 left-0 right-0 z-0 h-[100px] overflow-hidden">
-              <FlickeringGrid
-                className="h-full w-full"
-                squareSize={2}
-                gridGap={2}
-                style={{
-                  maskImage:
-                    "linear-gradient(to bottom, black, transparent)",
-                  WebkitMaskImage:
-                    "linear-gradient(to bottom, black, transparent)",
-                }}
-              />
-            </div>
-            <div className="relative z-10 mx-auto max-w-2xl px-6 py-12 pb-24 sm:py-24">
-              {children}
-            </div>
-            <Navbar />
+            <SmoothScroll>
+              <ScrollProgress />
+              <div className="absolute inset-0 top-0 left-0 right-0 z-0 h-[100px] overflow-hidden">
+                <FlickeringGrid
+                  className="h-full w-full"
+                  squareSize={2}
+                  gridGap={2}
+                  style={{
+                    maskImage:
+                      "linear-gradient(to bottom, black, transparent)",
+                    WebkitMaskImage:
+                      "linear-gradient(to bottom, black, transparent)",
+                  }}
+                />
+              </div>
+              <div className="relative z-10 mx-auto max-w-2xl px-6 py-12 pb-24 sm:py-24">
+                {children}
+              </div>
+              <Navbar />
+            </SmoothScroll>
           </TooltipProvider>
         </ThemeProvider>
         </LanguageProvider>
