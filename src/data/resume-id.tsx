@@ -52,15 +52,22 @@ const EDUCATION_DEGREES = [
 
 const PROJECT_DESCRIPTIONS = [
   "Aplikasi open source untuk profit dan stok UMKM F&B, dipasang di server sendiri. Dari resep ke stok lewat BOM, hitung HPP otomatis (WAC), pantau profit per menu, sampai rencana belanja yang menyesuaikan kas.",
+  "REST API untuk sistem war tiket konser yang dibangun dengan Go dan Clean Architecture. Menggunakan PostgreSQL untuk stok dan pemesanan, Redis untuk admission/queue, serta MongoDB untuk ulasan.",
+  "Toolkit dan skill agen untuk mengubah gambar referensi UI menjadi kode front-end yang setia terhadap desain, dilengkapi skrip analisis, ekstraksi design token, diff screenshot, dan pengecekan anti-AI-slop.",
   "Platform kolaboratif berbasis AI untuk melestarikan kosakata daerah di Indonesia. Dibuat agar komunitas bisa mendokumentasikan, menjelajahi, dan menghidupkan kembali kosa kata lokal yang terancam hilang.",
   "Prototipe sistem informasi terintegrasi untuk SWK Srikana Food Walk UNAIR, frontend React 19 + Vite yang mengimplementasikan 11 modul framework web, termasuk SSE, NFC, Geolocation, QR, dan payment gateway.",
+  "Platform EdTech dan marketplace terintegrasi (Creative, Technology, Business) dengan kursus, produk, aset digital, event, dan halaman admin. Dibangun dengan Next.js 14, TypeScript, dan Tailwind CSS.",
+  "Landing page responsif untuk platform EdTech CreTechin yang menonjolkan fitur pembelajaran, marketplace, dan event dengan micro-interaction yang halus.",
   "Aplikasi manajemen keuangan pribadi untuk Gen-Z Indonesia. Catat pengeluaran, tetapkan anggaran, dan capai target tabungan lewat antarmuka yang ringan dan enak dibaca.",
-  "Aplikasi mobile berbasis Flutter untuk mengelola sistem ticketing helpdesk, dari pembuatan dan penugasan tiket sampai pelacakan penyelesaian. Dibuat untuk mata kuliah Pemrograman Aplikasi Mobile.",
+  "Aplikasi mobile berbasis Flutter untuk mengelola sistem ticketing helpdesk, dari pembuatan dan penugasan tiket sampai pelacakan penyelesaian.",
+  "Versi awal website portofolio pribadi untuk menampilkan proyek dan pengalaman, dibangun dengan React, Vite, dan Framer Motion dengan desain interaktif bertema cyber.",
+  "Website portofolio ini: aplikasi Next.js 16 bilingual dengan Tailwind CSS v4, animasi Motion, dan komponen bergaya Magic UI yang ditulis sendiri.",
   "Aplikasi klasifikasi penyakit hati berdasarkan Indian Liver Patient Dataset memakai SVM dengan resampling SMOTE, dibungkus antarmuka Streamlit yang interaktif.",
+  "Sistem manajemen depot berbasis Laravel 12 dan MySQL untuk mengelola data master, pengadaan, penerimaan, penjualan, dan kartu stok pada usaha depot makanan.",
   "Aplikasi manajemen berbasis web untuk RS Hewan Pendidikan Universitas Airlangga, mencakup alur kerja resepsionis, perawat, dokter, dan pemilik hewan. Dibangun dengan Laravel 11.",
-  "Sistem manajemen depot dengan Laravel 12 dan MySQL untuk mengelola master data, pembelian, penerimaan, penjualan, dan kartu stok pada bisnis distribusi makanan.",
-  "Tugas dan modul mata kuliah Pemrograman Backend Lanjutan di Universitas Airlangga. REST API dengan Go/Fiber dan PostgreSQL, MongoDB, serta Redis, lengkap dengan pengujian, dokumentasi Swagger, dan Docker.",
-  "Platform EdTerpadu (Creative, Technology, and Business) yang menghubungkan perkuliahan dengan praktik industri, lengkap dengan desain UI menyeluruh dan landing page responsif.",
+  "Sistem manajemen buku berbasis Laravel untuk mengelola data buku dan informasi terkait sebagai bagian dari tugas pemrograman web.",
+  "Website dinamis untuk menjelajahi film dan serial populer menggunakan TMDB API, dilengkapi hero trending, filter, pencarian, dan modal detail.",
+  "Formulir pendaftaran interaktif untuk tugas workshop desain UI, dengan validasi sisi klien, feedback status, dan tampilan responsif.",
 ];
 
 const HONOR_TITLES = [

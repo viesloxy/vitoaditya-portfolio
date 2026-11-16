@@ -241,24 +241,39 @@ export const DATA = {
       showInProjectsPage: true,
       description:
         "Open-source, self-hosted profit & inventory manager built for small F&B businesses (UMKM). From recipes to stock via BOM, automatic HPP costing (WAC), per-menu profit tracking, and a cash-aware shopping planner.",
-      technologies: [
-        "Laravel",
-        "React",
-        "Inertia.js",
-        "PostgreSQL",
-        "TypeScript",
-      ],
+      technologies: ["Laravel", "React", "Inertia.js", "PostgreSQL", "TypeScript"],
       links: [
-        {
-          type: "Website",
-          href: "https://kulakan.web.id/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/kulakan",
-          icon: "github",
-        },
+        { type: "Website", href: "https://kulakan.web.id/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/kulakan", icon: "github" },
+      ],
+      image: "",
+    },
+    {
+      title: "NgawiMusical Backend",
+      href: "https://github.com/viesloxy/ngawimusical-backend",
+      dates: "2026",
+      active: true,
+      showInProjectsPage: true,
+      description:
+        "REST API for a concert ticket war system built with Go and Clean Architecture. Uses PostgreSQL for stock and bookings, Redis for admission/queue, and MongoDB for reviews.",
+      technologies: ["Go", "Fiber", "PostgreSQL", "Redis", "MongoDB", "Docker"],
+      links: [
+        { type: "Source", href: "https://github.com/viesloxy/ngawimusical-backend", icon: "github" },
+      ],
+      image: "",
+    },
+    {
+      title: "ui-slicing",
+      href: "https://github.com/viesloxy/ui-slicing",
+      dates: "2026",
+      active: true,
+      showInProjectsPage: true,
+      description:
+        "Agent skill and toolkit to slice any UI reference image into pixel-faithful front-end code, with analysis scripts, design-token extraction, screenshot diffing, and anti-AI-slop checks.",
+      technologies: ["Agent Skills", "Python", "Pillow", "Frontend"],
+      links: [
+        { type: "Website", href: "https://viesloxy.github.io/ui-slicing/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/ui-slicing", icon: "github" },
       ],
       image: "",
     },
@@ -272,16 +287,8 @@ export const DATA = {
         "AI-powered collaborative platform for preserving Indonesia's regional vocabulary. Built to help communities document, explore, and revive endangered local words together.",
       technologies: ["Next.js", "TypeScript", "React", "AI"],
       links: [
-        {
-          type: "Website",
-          href: "https://silestari.vercel.app",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/silestari",
-          icon: "github",
-        },
+        { type: "Website", href: "https://silestari.vercel.app", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/silestari", icon: "github" },
       ],
       image: "/images/projects/silestari.jpg",
     },
@@ -295,16 +302,38 @@ export const DATA = {
         "Integrated information system prototype for SWK Srikana Food Walk UNAIR, a React 19 + Vite frontend implementing 11 web-framework modules including SSE, NFC, Geolocation, QR, and a payment gateway.",
       technologies: ["React", "Vite", "SSE", "NFC", "Geolocation", "QR"],
       links: [
-        {
-          type: "Website",
-          href: "https://srikanago.netlify.app/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/srikana-go",
-          icon: "github",
-        },
+        { type: "Website", href: "https://srikanago.netlify.app/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/srikana-go", icon: "github" },
+      ],
+      image: "",
+    },
+    {
+      title: "CreTechin UI Design",
+      href: "https://github.com/viesloxy/cretechin-ui-design",
+      dates: "May 2026",
+      active: true,
+      showInProjectsPage: true,
+      description:
+        "Integrated EdTech and marketplace platform UI (Creative, Technology, Business) with courses, products, digital assets, events, and admin pages. Built with Next.js 14, TypeScript, and Tailwind CSS.",
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
+      links: [
+        { type: "Website", href: "https://cretechin.netlify.app/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/cretechin-ui-design", icon: "github" },
+      ],
+      image: "",
+    },
+    {
+      title: "CreTechin Landing Page",
+      href: "https://github.com/viesloxy/cretechin-landing-page-uts-workshop-ui",
+      dates: "May 2026",
+      active: true,
+      showInProjectsPage: true,
+      description:
+        "Responsive landing page for the CreTechin EdTech platform, highlighting learning, marketplace, and event features with smooth micro-interactions.",
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Framer Motion"],
+      links: [
+        { type: "Website", href: "https://cretechin-landing-page.vercel.app/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/cretechin-landing-page-uts-workshop-ui", icon: "github" },
       ],
       image: "",
     },
@@ -318,34 +347,52 @@ export const DATA = {
         "A personal finance manager for Indonesian Gen-Z. Track expenses, set budgets, and reach savings goals in a playful, readable interface.",
       technologies: ["Next.js", "TypeScript", "TailwindCSS"],
       links: [
-        {
-          type: "Website",
-          href: "https://kantongek.netlify.app/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/kantongek",
-          icon: "github",
-        },
+        { type: "Website", href: "https://kantongek.netlify.app/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/kantongek", icon: "github" },
       ],
       image: "",
     },
     {
       title: "E-Ticketing Helpdesk Mobile App",
-      href: "https://github.com/viesloxy/e-ticketing-helpdesk-mobile-app",
+      href: "https://github.com/viesloxy/434241084_Vito-Aditya_TI-B4_UTS",
       dates: "Apr 2026",
       active: false,
-      showInProjectsPage: false,
+      showInProjectsPage: true,
       description:
-        "A Flutter-based mobile application for managing helpdesk ticketing systems, from ticket creation and assignment through resolution tracking. Built for the Mobile Application Programming course.",
+        "A Flutter-based mobile application for managing helpdesk ticketing systems, from ticket creation and assignment through resolution tracking.",
       technologies: ["Flutter", "Dart"],
       links: [
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/e-ticketing-helpdesk-mobile-app",
-          icon: "github",
-        },
+        { type: "Source", href: "https://github.com/viesloxy/434241084_Vito-Aditya_TI-B4_UTS", icon: "github" },
+      ],
+      image: "",
+    },
+    {
+      title: "Personal Portfolio v1",
+      href: "https://github.com/viesloxy/viesloxy-portofolio-v1",
+      dates: "2026",
+      active: true,
+      showInProjectsPage: true,
+      description:
+        "Earlier personal portfolio website showcasing projects and experience, built with React, Vite, and Framer Motion in a cyber-themed interactive design.",
+      technologies: ["React", "Vite", "Framer Motion"],
+      links: [
+        { type: "Website", href: "https://vitoaditya-portfolio-2026.netlify.app/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/viesloxy-portofolio-v1", icon: "github" },
+      ],
+      image: "",
+    },
+    {
+      title: "Personal Portfolio (Current)",
+      href: "https://github.com/viesloxy/vitoaditya-portfolio",
+      dates: "2026",
+      active: true,
+      showInProjectsPage: true,
+      description:
+        "This portfolio site: a bilingual Next.js 16 app with Tailwind CSS v4, Motion animations, and hand-written Magic UI-style components.",
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Motion"],
+      links: [
+        { type: "Website", href: "https://vitoaditya.my.id/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/vitoaditya-portfolio", icon: "github" },
       ],
       image: "",
     },
@@ -354,18 +401,28 @@ export const DATA = {
       href: "https://github.com/viesloxy/livercheck-klasifikasi-liver",
       dates: "Oct 2026",
       active: false,
-      showInProjectsPage: false,
+      showInProjectsPage: true,
       description:
         "Liver disease classification app based on the Indian Liver Patient Dataset using SVM with SMOTE resampling, wrapped in an interactive Streamlit interface.",
       technologies: ["Python", "Streamlit", "scikit-learn", "SMOTE"],
       links: [
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/livercheck-klasifikasi-liver",
-          icon: "github",
-        },
+        { type: "Source", href: "https://github.com/viesloxy/livercheck-klasifikasi-liver", icon: "github" },
       ],
       image: "/images/projects/livercheck.jpg",
+    },
+    {
+      title: "Sistem Manajemen Depot",
+      href: "https://github.com/viesloxy/sistem-manajemen-depot-pbd",
+      dates: "Dec 2025",
+      active: false,
+      showInProjectsPage: true,
+      description:
+        "Depot management system built with Laravel 12 and MySQL to manage master data, procurement, receiving, sales, and stock cards for a food-depot business.",
+      technologies: ["Laravel", "PHP", "MySQL"],
+      links: [
+        { type: "Source", href: "https://github.com/viesloxy/sistem-manajemen-depot-pbd", icon: "github" },
+      ],
+      image: "/images/projects/depot.jpg",
     },
     {
       title: "Sistem Manajemen RSHP",
@@ -377,70 +434,51 @@ export const DATA = {
         "Web management application for the Educational Animal Hospital of Universitas Airlangga, covering the complete workflows of receptionists, nurses, doctors, and pet owners. Built with Laravel 11.",
       technologies: ["Laravel", "PHP", "MySQL", "Blade"],
       links: [
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/sistem-manajemen-rshp-pwbf",
-          icon: "github",
-        },
+        { type: "Source", href: "https://github.com/viesloxy/sistem-manajemen-rshp-pwbf", icon: "github" },
       ],
       image: "/images/projects/rshp.jpg",
     },
     {
-      title: "Sistem Manajemen Depot",
-      href: "https://github.com/viesloxy/sistem-manajemen-depot-pbd",
-      dates: "Dec 2025",
+      title: "Sistem Manajemen Buku",
+      href: "https://github.com/viesloxy/sistem-manajemen-buku-wpwbf",
+      dates: "2025",
       active: false,
-      showInProjectsPage: false,
+      showInProjectsPage: true,
       description:
-        "Depot management system built with Laravel 12 and MySQL to manage master data, procurement, receiving, sales, and stock cards for a food-depot business.",
-      technologies: ["Laravel", "PHP", "MySQL"],
+        "Book management system built with Laravel for managing book records and related data as part of web programming coursework.",
+      technologies: ["Laravel", "PHP", "MySQL", "Blade"],
       links: [
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/sistem-manajemen-depot-pbd",
-          icon: "github",
-        },
-      ],
-      image: "/images/projects/depot.jpg",
-    },
-    {
-      title: "Go/Fiber REST API Playground",
-      href: "https://github.com/viesloxy/pemograman-backend-lanjut",
-      dates: "Aug 2026",
-      active: true,
-      showInProjectsPage: false,
-      description:
-        "Coursework and modules for Advanced Backend Programming at Universitas Airlangga. REST APIs with Go/Fiber backed by PostgreSQL, MongoDB, and Redis, complete with testing, Swagger docs, and Docker.",
-      technologies: ["Go", "Fiber", "PostgreSQL", "MongoDB", "Redis", "Docker", "Swagger"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/pemograman-backend-lanjut",
-          icon: "github",
-        },
+        { type: "Source", href: "https://github.com/viesloxy/sistem-manajemen-buku-wpwbf", icon: "github" },
       ],
       image: "",
     },
     {
-      title: "CreTechin",
-      href: "https://github.com/viesloxy/cretechin-ui-design",
-      dates: "May 2026",
+      title: "Top Elitis Film",
+      href: "https://github.com/viesloxy/top-elitis-film",
+      dates: "2025",
       active: true,
       showInProjectsPage: true,
       description:
-        "An integrated EdTech platform (Creative, Technology, and Business) that connects academic coursework with industry practice, including a complete UI design and a responsive landing page.",
-      technologies: ["Next.js", "TypeScript", "TailwindCSS", "UI/UX"],
+        "Dynamic website for browsing popular movies and series using the TMDB API, featuring trending hero, filters, search, and detail modals.",
+      technologies: ["HTML", "CSS", "JavaScript", "TMDB API"],
       links: [
-        {
-          type: "Website",
-          href: "https://cretechin.netlify.app/",
-          icon: "globe",
-        },
-        {
-          type: "Source",
-          href: "https://github.com/viesloxy/cretechin-ui-design",
-          icon: "github",
-        },
+        { type: "Website", href: "https://top-elitis.netlify.app/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/top-elitis-film", icon: "github" },
+      ],
+      image: "",
+    },
+    {
+      title: "Formulir Pendaftaran IMPHNEN",
+      href: "https://github.com/viesloxy/formulir-pendaftaran-IMPHNEN",
+      dates: "2025",
+      active: true,
+      showInProjectsPage: true,
+      description:
+        "Interactive registration form for a UI design workshop task, featuring client-side validation, feedback states, and a responsive layout.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      links: [
+        { type: "Website", href: "https://formulir-pendaftaran-imphnen.netlify.app/", icon: "globe" },
+        { type: "Source", href: "https://github.com/viesloxy/formulir-pendaftaran-IMPHNEN", icon: "github" },
       ],
       image: "",
     },
