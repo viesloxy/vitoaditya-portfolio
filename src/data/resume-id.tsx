@@ -10,7 +10,7 @@ const DESCRIPTION =
   "Software Engineer & Creative Designer. Mahasiswa Teknik Informatika Universitas Airlangga dengan pengalaman di desain, software engineering, AI, data, dan cybersecurity.";
 
 const SUMMARY =
-  "Saya **Vito Aditya**, Software Engineer sekaligus Creative Designer yang sedang menempuh gelar sarjana terapan di [Teknik Informatika Universitas Airlangga](https://www.unair.ac.id). Saya punya pengalaman langsung di lima bidang: desain dan kreatif, software engineering, AI dan machine learning, data, serta cybersecurity. Bidang yang paling saya minati adalah software engineering dan creative design, terutama saat keduanya bertemu.";
+  "Saya **Vito Aditya**, Software Engineer sekaligus Creative Designer yang sedang menempuh gelar sarjana terapan di [Teknik Informatika Universitas Airlangga](https://unair.ac.id/). Saya punya pengalaman langsung di lima bidang: desain dan kreatif, software engineering, AI dan machine learning, data, serta cybersecurity. Bidang yang paling saya minati adalah software engineering dan creative design, terutama saat keduanya bertemu. Saya juga memiliki pengetahuan mendalam tentang AI dan selalu mengikuti tren terbarunya - mulai dari AI agent, harness, model, dan provider hingga workflow desain, UI/UX, pembuatan diagram, dan pengembangan berbasis AI - sehingga bisa memilih tools yang paling tepat untuk [setiap proyek](/#projects).";
 
 const ROLES = [
   "Software Engineering",
@@ -38,12 +38,13 @@ const WORK_DESCRIPTIONS = [
 ];
 
 const SKILL_GROUP_TITLES = [
-  "Desain & Kreatif",
   "Software Engineering",
+  "Desain & Kreatif",
   "AI & Machine Learning",
   "Data",
   "Cybersecurity",
 ];
+
 
 const EDUCATION_DEGREES = [
   "Sarjana Terapan, Teknik Informatika",

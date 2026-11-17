@@ -18,7 +18,7 @@ export const DATA = {
   description:
     "Software Engineer & Creative Designer. Informatics Engineering student at Universitas Airlangga with hands-on experience across design, software engineering, AI, data, and cybersecurity.",
   summary:
-    "I'm **Vito Aditya**, a Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Informatics Engineering at Universitas Airlangga](https://www.unair.ac.id). I have hands-on experience across five fields: design and creative, software engineering, AI and machine learning, data, and cybersecurity. I'm most passionate about software engineering and creative design, and I enjoy working where the two overlap.",
+    "I'm **Vito Aditya**, a Software Engineer and Creative Designer currently pursuing an applied bachelor's degree in [Informatics Engineering at Universitas Airlangga](https://unair.ac.id/). I have hands-on experience across five fields: design and creative, software engineering, AI and machine learning, data, and cybersecurity. I'm most passionate about software engineering and creative design, and I enjoy working where the two overlap. I also have in-depth knowledge of AI and stay up to date with the latest trends, from AI agents, harnesses, models, and providers to AI-assisted design, UI/UX, diagramming, and development workflows, so I can choose the right tools for [each project](/#projects).",
   avatarUrl: "/me.jpg",
   resumeUrl:
     "https://drive.google.com/file/d/1Bdm-hVJQkhXLvfqbIjmAOvNPF-jF0q1D/view?usp=sharing",
@@ -39,19 +39,6 @@ export const DATA = {
 
   skillGroups: [
     {
-      title: "Design & Creative",
-      tools: [
-        { name: "Figma", icon: "figma" },
-        { name: "Photoshop", icon: "adobephotoshop", invert: true },
-        { name: "Illustrator", icon: "adobeillustrator", invert: true },
-        { name: "Premiere Pro", icon: "adobepremierepro", invert: true },
-        { name: "After Effects", icon: "adobeaftereffects", invert: true },
-        { name: "DaVinci Resolve", icon: "davinciresolve", invert: true },
-        { name: "Blender", icon: "blender" },
-        { name: "Canva", icon: "canva", invert: true },
-      ],
-    },
-    {
       title: "Software Engineering",
       tools: [
         { name: "React", icon: "react" },
@@ -71,6 +58,19 @@ export const DATA = {
         { name: "Docker", icon: "docker" },
         { name: "Git", icon: "git" },
         { name: "Vite", icon: "vite" },
+      ],
+    },
+    {
+      title: "Design & Creative",
+      tools: [
+        { name: "Figma", icon: "figma" },
+        { name: "Photoshop", icon: "adobephotoshop", invert: true },
+        { name: "Illustrator", icon: "adobeillustrator", invert: true },
+        { name: "Premiere Pro", icon: "adobepremierepro", invert: true },
+        { name: "After Effects", icon: "adobeaftereffects", invert: true },
+        { name: "DaVinci Resolve", icon: "davinciresolve", invert: true },
+        { name: "Blender", icon: "blender" },
+        { name: "Canva", icon: "canva", invert: true },
       ],
     },
     {

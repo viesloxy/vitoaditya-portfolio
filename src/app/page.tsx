@@ -26,6 +26,7 @@ import {
   SchoolIcon,
 } from "lucide-react";
 import { Icons } from "@/components/icons";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import GitHubActivitySection from "@/components/section/github-activity";
 
@@ -272,18 +273,28 @@ export default function Page() {
                   <h3 className="text-sm font-semibold text-foreground">
                     {group.title}
                   </h3>
+                  {"description" in group && group.description ? (
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {group.description as string}
+                    </p>
+                  ) : null}
                   <div className="flex flex-wrap gap-2">
                     {group.tools.map((tool) => (
                       <div
                         key={`${group.title}-${tool.name}`}
-                        className="flex h-8 w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 ring-2 ring-border/20"
+                        className={cn(
+                          "flex h-8 w-fit items-center gap-2 rounded-xl border border-border bg-background ring-2 ring-border/20",
+                          "icon" in tool && tool.icon ? "px-4" : "px-3"
+                        )}
                       >
-                        <TechIcon
-                          slug={tool.icon}
-                          name={tool.name}
-                          invert={"invert" in tool ? tool.invert : false}
-                          className="size-4 rounded overflow-hidden object-contain"
-                        />
+                        {"icon" in tool && tool.icon ? (
+                          <TechIcon
+                            slug={tool.icon}
+                            name={tool.name}
+                            invert={"invert" in tool ? tool.invert : false}
+                            className="size-4 overflow-hidden rounded object-contain"
+                          />
+                        ) : null}
                         <span className="text-sm font-medium text-foreground">
                           {tool.name}
                         </span>
@@ -296,6 +307,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+
 
       {/* ============================== PROJECTS ============================== */}
       <BlurFade delay={BLUR_FADE_DELAY * 17}>
